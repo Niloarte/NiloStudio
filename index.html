@@ -3,1004 +3,660 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>NILO — Nicola Lorusso · Video Director & Motion Designer</title>
+<meta name="description" content="Nicola Lorusso — Visual Director & Motion Specialist based in Milan. Post-Production, Motion Graphics, Live Event Media. Where strategic storytelling meets advanced motion design."/>
+<meta name="keywords" content="visual director Milan, motion specialist, post production, motion graphics, live event media, branded content, after effects, VFX compositing, video editing, TV production, color grading, 2D animation"/>
+<title>NILO — Nicola Lorusso · Visual Director & Motion Specialist · Milan</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
-/* =============================================
-   RESET & ROOT
-   ============================================= */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* ── RESET ───────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#03030e;--surf:#07071a;--white:#eaedf5;--gray:#7a8099;--muted:#b0b7d0;
+  --blue:#1a6fff;--cyan:#00cfff;--teal:#00b8a0;--purple:#7c4fff;
+  --g1:linear-gradient(130deg,var(--blue) 0%,var(--cyan) 55%,var(--teal) 100%);
+  --g2:linear-gradient(110deg,var(--cyan) 0%,var(--blue) 50%,var(--purple) 100%);
+  --glow:rgba(0,207,255,0.2);
+  --brd:rgba(255,255,255,0.07);--brdh:rgba(0,207,255,0.28);
+  --ft:'Bebas Neue',sans-serif;--fb:'Inter',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:var(--fb);font-weight:300;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 
-:root {
-  --bg:        #03030e;
-  --surface:   #07071a;
-  --white:     #eaedf5;
-  --gray:      #565a70;
-  --muted:     #8d93ad;
-  --blue:      #1a6fff;
-  --cyan:      #00cfff;
-  --teal:      #00b8a0;
-  --purple:    #7c4fff;
-  --g1: linear-gradient(130deg, var(--blue) 0%, var(--cyan) 55%, var(--teal) 100%);
-  --g2: linear-gradient(110deg, var(--cyan) 0%, var(--blue) 50%, var(--purple) 100%);
-  --glow:      rgba(0,207,255,0.22);
-  --border:    rgba(255,255,255,0.07);
-  --borderh:   rgba(0,207,255,0.3);
-  --ft: 'Bebas Neue', sans-serif;
-  --fb: 'Inter', sans-serif;
-}
+/* ── CANVAS ─────────────────────────────────── */
+#bgc{position:fixed;inset:0;z-index:0;pointer-events:none}
 
-html { scroll-behavior: smooth; font-size: 16px; }
+/* ── NAV ─────────────────────────────────────── */
+#nav{
+  position:fixed;top:0;left:0;right:0;height:70px;z-index:999;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 60px;
+  transition:background .35s,border-color .35s;
+}
+#nav.on{background:rgba(3,3,14,.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--brd)}
+.logo{font-family:var(--ft);font-size:26px;letter-spacing:.14em;color:var(--white);text-decoration:none;position:relative;flex-shrink:0}
+.logo::after{content:'';position:absolute;bottom:-5px;left:0;width:100%;height:2px;background:var(--g1);border-radius:2px}
+.nmenu{display:flex;align-items:center;gap:34px;list-style:none}
+.nmenu a{font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
+.nmenu a:hover{color:var(--white)}
+.ncta{font-size:11px!important;font-weight:600!important;color:#fff!important;background:var(--g1);padding:9px 22px;border-radius:30px;letter-spacing:.1em!important;box-shadow:0 0 22px var(--glow);transition:opacity .2s,transform .2s!important}
+.ncta:hover{opacity:.82;transform:translateY(-1px)}
 
-body {
-  background: var(--bg);
-  color: var(--white);
-  font-family: var(--fb);
-  font-weight: 300;
-  line-height: 1.65;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-}
+/* ── HERO ─────────────────────────────────────── */
+#hero{position:relative;z-index:10;min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 60px 90px;padding-top:70px}
+.htag{font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);margin-bottom:22px;opacity:0;animation:fu .8s ease .3s forwards}
+.hh1{font-family:var(--ft);font-size:clamp(76px,12vw,158px);letter-spacing:.02em;line-height:.9;text-transform:uppercase;color:var(--white);opacity:0;animation:fu .9s ease .5s forwards}
+.hh1 .ac{background:var(--g2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hrow{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;margin-top:44px;flex-wrap:wrap;opacity:0;animation:fu .9s ease .7s forwards}
+.hdesc{font-size:15px;color:var(--muted);max-width:480px;line-height:1.82}
+/* hero role */
+.hrole{font-size:13px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--white);margin-top:18px;opacity:0;animation:fu .9s ease .65s forwards;line-height:1.9}
+.hrole .hrole-sub{display:block;font-size:12px;font-weight:400;letter-spacing:.06em;color:var(--muted);text-transform:none;margin-top:5px}
+/* languages */
+.lang-grid{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.lang-card{display:flex;flex-direction:column;align-items:center;padding:18px 32px;border:1px solid var(--brd);border-radius:10px;background:rgba(255,255,255,.018);transition:background .3s,border-color .3s;gap:6px;min-width:120px}
+.lang-card:hover{background:rgba(255,255,255,.035);border-color:var(--brdh)}
+.lang-name{font-family:var(--ft);font-size:19px;letter-spacing:.08em;color:var(--white)}
+.lang-level{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan)}
+.hacts{display:flex;gap:14px;flex-shrink:0}
+/* hero stats strip */
+.hstats{display:flex;gap:0;margin-top:56px;border-top:1px solid var(--brd);opacity:0;animation:fu .9s ease .9s forwards}
+.hstat{flex:1;padding:24px 0 0;border-right:1px solid var(--brd)}
+.hstat:last-child{border-right:none}
+.hstat-n{font-family:var(--ft);font-size:38px;letter-spacing:-.02em;color:var(--white);line-height:1}
+.hstat-n sub{font-size:18px;color:var(--cyan);vertical-align:baseline}
+.hstat-l{font-size:10px;color:var(--gray);letter-spacing:.1em;text-transform:uppercase;margin-top:4px}
 
-/* =============================================
-   CANVAS BACKGROUND
-   ============================================= */
-#bgc {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  z-index: 0;
-  pointer-events: none;
-}
+/* scroll hint */
+.shint{position:absolute;right:60px;bottom:40px;display:flex;flex-direction:column;align-items:center;gap:10px;opacity:0;animation:fi 1s ease 1.4s forwards}
+.shint span{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gray);writing-mode:vertical-lr}
+.sline{width:1px;height:54px;background:linear-gradient(to bottom,var(--cyan),transparent);animation:pls 2s ease-in-out infinite}
 
-/* =============================================
-   NAV — single, clean, fixed
-   ============================================= */
-#nav {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  height: 72px;
-  z-index: 999;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 56px;
-  transition: background 0.35s, border-color 0.35s;
-}
-#nav.scrolled {
-  background: rgba(3,3,14,0.94);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border-bottom: 1px solid var(--border);
-}
+/* ── BUTTONS ─────────────────────────────────── */
+.btn{display:inline-block;font-family:var(--fb);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:13px 30px;border-radius:30px;text-decoration:none;cursor:pointer;border:none;transition:all .25s}
+.btn-p{background:var(--g1);color:#fff;box-shadow:0 0 28px var(--glow)}
+.btn-p:hover{box-shadow:0 0 50px var(--glow);transform:translateY(-2px)}
+.btn-s{background:transparent;color:var(--white);border:1px solid var(--brdh)}
+.btn-s:hover{background:rgba(0,207,255,.07);border-color:rgba(0,207,255,.55);transform:translateY(-2px)}
 
-.nav-logo {
-  font-family: var(--ft);
-  font-size: 26px;
-  letter-spacing: 0.14em;
-  color: var(--white);
-  text-decoration: none;
-  position: relative;
-  flex-shrink: 0;
-}
-.nav-logo::after {
-  content: '';
-  position: absolute;
-  bottom: -5px; left: 0;
-  width: 100%; height: 2px;
-  background: var(--g1);
-  border-radius: 2px;
-}
+/* ── SECTIONS ────────────────────────────────── */
+.sec{position:relative;z-index:10;padding:100px 60px;border-top:1px solid var(--brd)}
+.eye{display:flex;align-items:center;gap:12px;font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);margin-bottom:12px}
+.eye::before{content:'';width:24px;height:1px;background:var(--cyan);flex-shrink:0}
+.stitle{font-family:var(--ft);font-size:clamp(34px,4.5vw,60px);letter-spacing:.04em;line-height:1;text-transform:uppercase;color:var(--white)}
+.sechead{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:44px;gap:20px;flex-wrap:wrap}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.on{opacity:1;transform:none}
 
-.nav-menu {
-  display: flex;
-  align-items: center;
-  gap: 36px;
-  list-style: none;
-}
-.nav-menu a {
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--muted);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-.nav-menu a:hover { color: var(--white); }
+/* ── PORTFOLIO FILTER TABS ───────────────────── */
+.filter-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:40px}
+.ftab{font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border:1px solid var(--brd);padding:7px 18px;border-radius:30px;cursor:pointer;transition:all .2s;background:transparent;user-select:none}
+.ftab:hover{border-color:var(--brdh);color:var(--white)}
+.ftab.active{background:var(--g1);color:#fff;border-color:transparent;box-shadow:0 0 18px var(--glow)}
 
-.nav-cta {
-  font-size: 11px !important;
-  font-weight: 600 !important;
-  color: #fff !important;
-  background: var(--g1);
-  padding: 9px 22px;
-  border-radius: 30px;
-  letter-spacing: 0.1em !important;
-  box-shadow: 0 0 24px var(--glow);
-  transition: opacity 0.2s, transform 0.2s !important;
-}
-.nav-cta:hover { opacity: 0.82; transform: translateY(-1px); }
+/* ── VIDEO LAYOUT ────────────────────────────── */
+/* Featured 16:9 */
+.vfeat{border-radius:14px;overflow:hidden;background:var(--surf);border:1px solid var(--brdh);box-shadow:0 0 50px rgba(0,180,255,.1);transition:box-shadow .3s}
+.vfeat:hover{box-shadow:0 0 80px rgba(0,207,255,.16)}
+.r169{position:relative;padding-bottom:56.25%}
+.r169 iframe,.r50 iframe{position:absolute;inset:0;width:100%;height:100%;border:none;display:block}
+.r50{position:relative;padding-bottom:50%}
 
-/* =============================================
-   HERO
-   ============================================= */
-#hero {
-  position: relative;
-  z-index: 10;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 0 56px 80px;
-  padding-top: 72px; /* nav height */
-}
+/* Grid 2 col */
+.vg2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+/* Grid 3 col */
+.vg3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:16px}
+/* Grid 1+2 asymmetric */
+.vg12{display:grid;grid-template-columns:1.6fr 1fr;gap:16px;margin-top:16px}
 
-.hero-tag {
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--cyan);
-  margin-bottom: 22px;
-  opacity: 0;
-  animation: fadeUp 0.8s ease 0.3s forwards;
-}
+.vcell{background:var(--surf);border:1px solid var(--brd);border-radius:12px;overflow:hidden;transition:border-color .3s,box-shadow .3s,transform .3s}
+.vcell:hover{border-color:var(--brdh);box-shadow:0 0 28px rgba(0,207,255,.09);transform:translateY(-3px)}
 
-.hero-h1 {
-  font-family: var(--ft);
-  font-size: clamp(72px, 11.5vw, 150px);
-  letter-spacing: 0.02em;
-  line-height: 0.9;
-  text-transform: uppercase;
-  color: var(--white);
-  opacity: 0;
-  animation: fadeUp 0.9s ease 0.5s forwards;
-}
-.hero-h1 .grad {
-  background: var(--g2);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
+/* Video label */
+.vlabel{padding:14px 18px;border-top:1px solid var(--brd)}
+.vlabel-feat{display:flex;align-items:center;justify-content:space-between;padding:16px 22px;border-top:1px solid var(--brd);gap:12px}
+.vclient{font-family:var(--ft);font-size:16px;letter-spacing:.06em;color:var(--white);text-transform:uppercase}
+.vrole{font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);margin-top:3px}
 
-.hero-row {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 40px;
-  margin-top: 40px;
-  flex-wrap: wrap;
-  opacity: 0;
-  animation: fadeUp 0.9s ease 0.7s forwards;
-}
-.hero-desc {
-  font-size: 15px;
-  color: var(--muted);
-  max-width: 420px;
-  line-height: 1.8;
-}
-.hero-actions { display: flex; gap: 14px; flex-shrink: 0; }
+/* portfolio items hidden when filtered */
+.pitem{transition:opacity .35s,transform .35s}
+.pitem.hidden{display:none}
 
-/* =============================================
-   BUTTONS
-   ============================================= */
-.btn {
-  display: inline-block;
-  font-family: var(--fb);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 13px 30px;
-  border-radius: 30px;
-  text-decoration: none;
-  cursor: pointer;
-  border: none;
-  transition: all 0.25s;
-}
-.btn-primary {
-  background: var(--g1);
-  color: #fff;
-  box-shadow: 0 0 28px var(--glow);
-}
-.btn-primary:hover { box-shadow: 0 0 50px var(--glow); transform: translateY(-2px); }
-.btn-secondary {
-  background: transparent;
-  color: var(--white);
-  border: 1px solid var(--borderh);
-}
-.btn-secondary:hover {
-  background: rgba(0,207,255,0.07);
-  border-color: rgba(0,207,255,0.55);
-  transform: translateY(-2px);
-}
+/* ── SERVICES ────────────────────────────────── */
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:52px}
+.scard{padding:40px 28px;background:rgba(255,255,255,.018);border:1px solid var(--brd);position:relative;overflow:hidden;transition:background .3s}
+.scard::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,207,255,.07),rgba(124,79,255,.04));opacity:0;transition:opacity .3s}
+.scard::after{content:'';position:absolute;top:0;right:0;width:64px;height:64px;background:radial-gradient(circle at top right,rgba(0,207,255,.22),transparent 70%);opacity:0;transition:opacity .3s}
+.scard:hover{background:rgba(255,255,255,.035)}
+.scard:hover::before,.scard:hover::after{opacity:1}
+.snum{font-family:var(--ft);font-size:48px;color:rgba(255,255,255,.04);line-height:1;margin-bottom:30px;display:block;position:relative;z-index:1}
+.sbar{width:26px;height:2px;background:var(--g1);border-radius:2px;margin-bottom:16px;position:relative;z-index:1}
+.sname{font-family:var(--ft);font-size:19px;letter-spacing:.06em;text-transform:uppercase;color:var(--white);margin-bottom:10px;position:relative;z-index:1}
+.sdesc{font-size:13px;color:var(--gray);line-height:1.75;position:relative;z-index:1}
 
-/* =============================================
-   SCROLL HINT
-   ============================================= */
-.scroll-hint {
-  position: absolute;
-  right: 56px; bottom: 36px;
-  display: flex; flex-direction: column; align-items: center; gap: 10px;
-  opacity: 0;
-  animation: fadeIn 1s ease 1.4s forwards;
-}
-.scroll-hint span {
-  font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
-  color: var(--gray); writing-mode: vertical-lr;
-}
-.scroll-line {
-  width: 1px; height: 54px;
-  background: linear-gradient(to bottom, var(--cyan), transparent);
-  animation: puls 2s ease-in-out infinite;
-}
+/* ── PROCESS (full-width accordion-style) ────── */
+.proc-list{margin-top:52px;display:flex;flex-direction:column;gap:2px}
+.proc-item{border:1px solid var(--brd);background:rgba(255,255,255,.018);overflow:hidden;transition:background .3s}
+.proc-item:hover{background:rgba(255,255,255,.03)}
+.proc-head{display:grid;grid-template-columns:100px 1fr;align-items:start;padding:44px 48px;gap:32px;cursor:default}
+.proc-num{font-family:var(--ft);font-size:72px;color:rgba(255,255,255,.06);line-height:1;letter-spacing:-.02em}
+.proc-body{}
+.proc-sub{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);margin-bottom:10px}
+.proc-title{font-family:var(--ft);font-size:32px;letter-spacing:.04em;text-transform:uppercase;color:var(--white);margin-bottom:16px}
+.proc-desc{font-size:14px;color:var(--muted);line-height:1.85;max-width:720px}
+.proc-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}
+.ptag{font-size:11px;color:var(--cyan);border:1px solid rgba(0,207,255,.25);padding:4px 13px;border-radius:20px;letter-spacing:.06em}
 
-/* =============================================
-   MARQUEE
-   ============================================= */
-.marquee {
-  position: relative; z-index: 10;
-  padding: 22px 0;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  overflow: hidden;
-  background: rgba(3,3,14,0.7);
-  backdrop-filter: blur(8px);
-}
-.marquee-inner {
-  display: flex; gap: 52px; align-items: center;
-  width: max-content;
-  animation: scroll 28s linear infinite;
-}
-.marquee:hover .marquee-inner { animation-play-state: paused; }
-.mitem {
-  font-family: var(--ft); font-size: 17px; letter-spacing: 0.14em;
-  color: rgba(255,255,255,0.14); white-space: nowrap;
-  transition: color 0.2s; cursor: default;
-}
-.mitem:hover { color: rgba(255,255,255,0.4); }
-.mdot {
-  width: 4px; height: 4px; border-radius: 50%;
-  background: var(--cyan); opacity: 0.35; flex-shrink: 0;
-}
+/* ── ABOUT ──────────────────────────────────── */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:start}
+.about-text p{font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:16px}
+.about-text strong{color:var(--white);font-weight:500}
+.about-btns{margin-top:32px;display:flex;gap:14px;flex-wrap:wrap}
 
-/* =============================================
-   SECTIONS — shared
-   ============================================= */
-.section {
-  position: relative; z-index: 10;
-  padding: 110px 56px;
-  border-top: 1px solid var(--border);
-}
+/* Skills panel */
+.skills-panel{}
+.skill-row{display:flex;align-items:center;justify-content:space-between;padding:13px 0;border-bottom:1px solid var(--brd)}
+.skill-row:first-child{border-top:1px solid var(--brd)}
+.sk-name{font-size:13px;color:var(--white)}
+.sk-track{width:160px;height:2px;background:rgba(255,255,255,.07);border-radius:2px;overflow:hidden}
+.sk-fill{height:100%;background:var(--g1);border-radius:2px;transform:scaleX(0);transform-origin:left;transition:transform 1.3s cubic-bezier(.16,1,.3,1)}
+.sk-fill.go{transform:scaleX(1)}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:24px}
+.tag{font-size:11px;color:var(--muted);border:1px solid var(--brd);padding:6px 15px;border-radius:30px;transition:all .2s;cursor:default}
+.tag:hover{border-color:var(--cyan);color:var(--white);background:rgba(0,207,255,.07)}
+.tag.ai{border-color:rgba(124,79,255,.3);color:#b49fff}
+.tag.ai:hover{border-color:var(--purple);background:rgba(124,79,255,.09)}
 
-.eyebrow {
-  display: flex; align-items: center; gap: 12px;
-  font-size: 10px; font-weight: 600; letter-spacing: 0.22em;
-  text-transform: uppercase; color: var(--cyan);
-  margin-bottom: 12px;
-}
-.eyebrow::before {
-  content: ''; width: 24px; height: 1px;
-  background: var(--cyan); flex-shrink: 0;
-}
+/* Soft skills grid */
+.soft-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:44px}
+.softcard{padding:24px 22px;border:1px solid var(--brd);border-radius:10px;background:rgba(255,255,255,.018);transition:background .3s,border-color .3s}
+.softcard:hover{background:rgba(255,255,255,.03);border-color:var(--brdh)}
+.soft-icon{font-size:22px;margin-bottom:10px}
+.soft-title{font-size:13px;font-weight:600;color:var(--white);margin-bottom:6px;letter-spacing:.02em}
+.soft-desc{font-size:12px;color:var(--gray);line-height:1.6}
 
-.stitle {
-  font-family: var(--ft);
-  font-size: clamp(36px, 4.5vw, 62px);
-  letter-spacing: 0.04em; line-height: 1;
-  text-transform: uppercase; color: var(--white);
-}
+/* ── CTA ─────────────────────────────────────── */
+#contact{position:relative;z-index:10;padding:130px 60px;text-align:center;border-top:1px solid var(--brd);overflow:hidden}
+#contact::before{content:'';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:800px;height:450px;background:radial-gradient(ellipse,rgba(0,180,255,.08) 0%,rgba(124,79,255,.05) 45%,transparent 70%);pointer-events:none}
+.cta-t{font-family:var(--ft);font-size:clamp(48px,8vw,96px);letter-spacing:.03em;line-height:.95;text-transform:uppercase;color:var(--white);margin-bottom:24px}
+.cta-t .ac{background:var(--g2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.cta-sub{font-size:15px;color:var(--muted);max-width:440px;margin:0 auto 44px;line-height:1.75}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-lnk{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border:1px solid var(--brd);padding:11px 22px;border-radius:30px;text-decoration:none;transition:all .2s}
+.btn-lnk:hover{color:var(--white);border-color:var(--brdh);background:rgba(0,207,255,.07)}
 
-.sec-head {
-  display: flex; align-items: flex-end; justify-content: space-between;
-  margin-bottom: 42px; gap: 20px; flex-wrap: wrap;
-}
+/* ── MARQUEE (bottom) ────────────────────────── */
+.mq{position:relative;z-index:10;padding:26px 0;border-top:1px solid var(--brd);overflow:hidden;background:rgba(3,3,14,.8);backdrop-filter:blur(10px)}
+.mq-inner{display:flex;gap:56px;align-items:center;width:max-content;animation:mqx 30s linear infinite}
+.mq:hover .mq-inner{animation-play-state:paused}
+.mi{font-family:var(--ft);font-size:17px;letter-spacing:.14em;color:rgba(255,255,255,.13);white-space:nowrap;transition:color .2s;cursor:default}
+.mi:hover{color:rgba(255,255,255,.4)}
+.md{width:4px;height:4px;border-radius:50%;background:var(--cyan);opacity:.3;flex-shrink:0}
 
-/* Reveal animation */
-.reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-.reveal.visible { opacity: 1; transform: none; }
+/* ── FOOTER ─────────────────────────────────── */
+footer{position:relative;z-index:10;border-top:1px solid var(--brd);padding:32px 60px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;background:rgba(3,3,14,.92)}
+.flogo{font-family:var(--ft);font-size:18px;letter-spacing:.14em;color:var(--white)}
+.fcopy{font-size:11px;color:var(--gray)}
+.fnav{display:flex;gap:24px}
+.fnav a{font-size:10px;font-weight:500;color:var(--gray);text-decoration:none;letter-spacing:.1em;text-transform:uppercase;transition:color .2s}
+.fnav a:hover{color:var(--white)}
 
-/* =============================================
-   VIDEO PLAYER — inline embed
-   ============================================= */
-.video-embed {
-  position: relative;
-  border-radius: 14px;
-  overflow: hidden;
-  background: var(--surface);
-  border: 1px solid var(--borderh);
-  box-shadow: 0 0 60px rgba(0,180,255,0.1);
-}
-.video-embed .ratio {
-  position: relative;
-  padding-bottom: 50%;
-}
-.video-embed iframe {
-  position: absolute;
-  inset: 0; width: 100%; height: 100%;
-  border: none; display: block;
-}
-.video-embed .vid-label {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 14px 20px;
-  border-top: 1px solid var(--border);
-  gap: 12px;
-}
-.vid-cat {
-  font-size: 10px; font-weight: 600; letter-spacing: 0.14em;
-  text-transform: uppercase; color: var(--cyan);
-}
-.vid-name { font-size: 13px; color: var(--muted); margin-top: 3px; }
+/* ── KEYFRAMES ──────────────────────────────── */
+@keyframes fu{from{opacity:0;transform:translateY(36px)}to{opacity:1;transform:none}}
+@keyframes fi{from{opacity:0}to{opacity:1}}
+@keyframes mqx{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes pls{0%,100%{opacity:.3}50%{opacity:1}}
 
-/* =============================================
-   VIDEO GRID — 2 columns
-   ============================================= */
-.vgrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  margin-top: 14px;
-}
-.vgrid-3 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 14px;
-  margin-top: 14px;
-}
-
-.vcell {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  overflow: hidden;
-  transition: border-color 0.3s, box-shadow 0.3s;
-}
-.vcell:hover {
-  border-color: var(--borderh);
-  box-shadow: 0 0 30px rgba(0,207,255,0.09);
-}
-.vcell .ratio {
-  position: relative;
-  padding-bottom: 56.25%;
-}
-.vcell iframe {
-  position: absolute;
-  inset: 0; width: 100%; height: 100%;
-  border: none; display: block;
-}
-.vcell .vid-label {
-  padding: 12px 16px;
-  border-top: 1px solid var(--border);
-}
-
-/* =============================================
-   SERVICES
-   ============================================= */
-.svc-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2px;
-  margin-top: 52px;
-}
-.svc-card {
-  padding: 42px 28px;
-  background: rgba(255,255,255,0.018);
-  border: 1px solid var(--border);
-  position: relative; overflow: hidden;
-  transition: background 0.3s;
-}
-.svc-card::before {
-  content: ''; position: absolute; inset: 0;
-  background: linear-gradient(135deg, rgba(0,207,255,0.07), rgba(124,79,255,0.04));
-  opacity: 0; transition: opacity 0.3s;
-}
-.svc-card::after {
-  content: ''; position: absolute; top: 0; right: 0;
-  width: 64px; height: 64px;
-  background: radial-gradient(circle at top right, rgba(0,207,255,0.2), transparent 70%);
-  opacity: 0; transition: opacity 0.3s;
-}
-.svc-card:hover { background: rgba(255,255,255,0.035); }
-.svc-card:hover::before, .svc-card:hover::after { opacity: 1; }
-.svc-num {
-  font-family: var(--ft); font-size: 50px; color: rgba(255,255,255,0.04);
-  line-height: 1; margin-bottom: 32px; display: block; position: relative; z-index: 1;
-}
-.svc-bar { width: 26px; height: 2px; background: var(--g1); border-radius: 2px; margin-bottom: 16px; position: relative; z-index: 1; }
-.svc-name { font-family: var(--ft); font-size: 19px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--white); margin-bottom: 10px; position: relative; z-index: 1; }
-.svc-desc { font-size: 13px; color: var(--gray); line-height: 1.75; position: relative; z-index: 1; }
-
-/* =============================================
-   ABOUT
-   ============================================= */
-.about-grid {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 96px; align-items: center;
-}
-.about-text p { font-size: 15px; color: var(--muted); line-height: 1.85; margin-bottom: 16px; }
-.about-text strong { color: var(--white); font-weight: 500; }
-.about-btns { margin-top: 32px; display: flex; gap: 14px; flex-wrap: wrap; }
-
-.stats {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 3px;
-}
-.stat {
-  padding: 32px 26px;
-  background: rgba(255,255,255,0.022);
-  border: 1px solid var(--border);
-  position: relative; overflow: hidden;
-  transition: background 0.3s;
-}
-.stat:hover { background: rgba(255,255,255,0.038); }
-.stat::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
-  background: linear-gradient(90deg, transparent, var(--cyan), transparent);
-  opacity: 0; transition: opacity 0.3s;
-}
-.stat:hover::before { opacity: 1; }
-.stat-n {
-  font-family: var(--ft); font-size: 52px; color: var(--white);
-  line-height: 1; margin-bottom: 4px; letter-spacing: -0.02em;
-}
-.stat-n sub { font-size: 22px; color: var(--cyan); vertical-align: baseline; }
-.stat-l { font-size: 10px; color: var(--gray); letter-spacing: 0.1em; text-transform: uppercase; }
-
-/* =============================================
-   TOOLS
-   ============================================= */
-.tools-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 96px; align-items: start; }
-.tools-intro p { font-size: 14px; color: var(--muted); line-height: 1.8; margin-top: 18px; }
-
-.skill-list { margin-top: 42px; }
-.skill-row {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 13px 0; border-bottom: 1px solid var(--border);
-}
-.skill-row:first-child { border-top: 1px solid var(--border); }
-.skill-name { font-size: 13px; color: var(--white); }
-.skill-track { width: 170px; height: 2px; background: rgba(255,255,255,0.07); border-radius: 2px; overflow: hidden; }
-.skill-fill {
-  height: 100%; background: var(--g1); border-radius: 2px;
-  transform: scaleX(0); transform-origin: left;
-  transition: transform 1.3s cubic-bezier(0.16,1,0.3,1);
-}
-.skill-fill.go { transform: scaleX(1); }
-
-.tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 26px; }
-.tag { font-size: 11px; color: var(--muted); border: 1px solid var(--border); padding: 6px 15px; border-radius: 30px; transition: all 0.2s; cursor: default; }
-.tag:hover { border-color: var(--cyan); color: var(--white); background: rgba(0,207,255,0.07); }
-.tag.ai { border-color: rgba(124,79,255,0.3); color: #b49fff; }
-.tag.ai:hover { border-color: var(--purple); background: rgba(124,79,255,0.09); }
-
-/* =============================================
-   PROCESS
-   ============================================= */
-.proc-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; margin-top: 52px; }
-.proc-step {
-  padding: 48px 36px;
-  background: rgba(255,255,255,0.018);
-  border: 1px solid var(--border);
-  position: relative; overflow: hidden;
-  transition: background 0.3s;
-}
-.proc-step:hover { background: rgba(255,255,255,0.034); }
-.proc-bg { font-family: var(--ft); font-size: 90px; color: rgba(255,255,255,0.028); position: absolute; top: 8px; right: 16px; line-height: 1; }
-.proc-bar { width: 26px; height: 2px; background: var(--g1); margin-bottom: 20px; border-radius: 2px; }
-.proc-title { font-family: var(--ft); font-size: 24px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--white); margin-bottom: 12px; }
-.proc-desc { font-size: 13px; color: var(--gray); line-height: 1.8; }
-
-/* =============================================
-   CTA
-   ============================================= */
-#contact {
-  position: relative; z-index: 10;
-  padding: 130px 56px;
-  text-align: center;
-  border-top: 1px solid var(--border);
-  overflow: hidden;
-}
-#contact::before {
-  content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
-  width: 800px; height: 450px;
-  background: radial-gradient(ellipse, rgba(0,180,255,0.08) 0%, rgba(124,79,255,0.05) 45%, transparent 70%);
-  pointer-events: none;
-}
-.cta-title {
-  font-family: var(--ft);
-  font-size: clamp(48px, 8vw, 96px);
-  letter-spacing: 0.03em; line-height: 0.95;
-  text-transform: uppercase; color: var(--white); margin-bottom: 24px;
-}
-.cta-title .grad {
-  background: var(--g2);
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-}
-.cta-sub { font-size: 15px; color: var(--muted); max-width: 440px; margin: 0 auto 44px; line-height: 1.75; }
-.cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-.btn-link {
-  display: inline-flex; align-items: center; gap: 7px;
-  font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--muted); border: 1px solid var(--border);
-  padding: 11px 22px; border-radius: 30px; text-decoration: none; transition: all 0.2s;
-}
-.btn-link:hover { color: var(--white); border-color: var(--borderh); background: rgba(0,207,255,0.07); }
-
-/* =============================================
-   FOOTER
-   ============================================= */
-footer {
-  position: relative; z-index: 10;
-  border-top: 1px solid var(--border);
-  padding: 32px 56px;
-  display: flex; align-items: center; justify-content: space-between;
-  flex-wrap: wrap; gap: 16px;
-  background: rgba(3,3,14,0.9);
-}
-.f-logo { font-family: var(--ft); font-size: 18px; letter-spacing: 0.14em; color: var(--white); }
-.f-copy { font-size: 11px; color: var(--gray); }
-.f-nav { display: flex; gap: 24px; }
-.f-nav a { font-size: 10px; font-weight: 500; color: var(--gray); text-decoration: none; letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.2s; }
-.f-nav a:hover { color: var(--white); }
-
-/* =============================================
-   KEYFRAMES
-   ============================================= */
-@keyframes fadeUp { from { opacity:0; transform:translateY(36px); } to { opacity:1; transform:none; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes scroll  { from { transform:translateX(0); } to { transform:translateX(-50%); } }
-@keyframes puls    { 0%,100% { opacity:.3; } 50% { opacity:1; } }
-
-/* =============================================
-   RESPONSIVE
-   ============================================= */
-@media (max-width: 900px) {
-  #nav { padding: 0 24px; }
-  .nav-menu { display: none; }
-  #hero, .section, #contact { padding-left: 24px; padding-right: 24px; }
-  .hero-h1 { font-size: clamp(60px, 14vw, 100px); }
-  .hero-row { flex-direction: column; align-items: flex-start; }
-  .about-grid, .tools-grid { grid-template-columns: 1fr; gap: 52px; }
-  .svc-grid { grid-template-columns: 1fr 1fr; }
-  .proc-grid { grid-template-columns: 1fr; }
-  .vgrid, .vgrid-3 { grid-template-columns: 1fr; }
-  footer { padding: 26px 24px; flex-direction: column; text-align: center; }
-  .scroll-hint { display: none; }
+/* ── RESPONSIVE ─────────────────────────────── */
+@media(max-width:960px){
+  #nav{padding:0 24px}
+  .nmenu{display:none}
+  #hero,.sec,#contact{padding-left:24px;padding-right:24px}
+  .hh1{font-size:clamp(62px,14vw,100px)}
+  .hrow{flex-direction:column;align-items:flex-start}
+  .hstats{gap:0}
+  .about-grid{grid-template-columns:1fr;gap:52px}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .soft-grid{grid-template-columns:1fr 1fr}
+  .proc-head{grid-template-columns:60px 1fr;padding:32px 24px;gap:20px}
+  .proc-num{font-size:48px}
+  .vg2,.vg3,.vg12{grid-template-columns:1fr}
+  footer{padding:26px 24px;flex-direction:column;text-align:center}
+  .shint{display:none}
 }
 </style>
 </head>
 <body>
-
-<!-- BACKGROUND CANVAS -->
 <canvas id="bgc"></canvas>
 
-<!-- ═══ NAV ═══════════════════════════════════════ -->
+<!-- NAV -->
 <nav id="nav">
-  <a href="#hero" class="nav-logo">NILO</a>
-  <ul class="nav-menu">
-    <li><a href="#work">Work</a></li>
+  <a href="#hero" class="logo">NILO</a>
+  <ul class="nmenu">
+    <li><a href="#portfolio">Work</a></li>
     <li><a href="#services">Services</a></li>
+    <li><a href="#process">Process</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="#contact" class="nav-cta">Start a Project</a></li>
+    <li><a href="#contact" class="ncta">Start a Project</a></li>
   </ul>
 </nav>
 
-<!-- ═══ HERO ══════════════════════════════════════ -->
+<!-- HERO -->
 <section id="hero">
-  <p class="hero-tag">Video Director &middot; Motion Designer &middot; Milan IT</p>
-  <h1 class="hero-h1">
-    We Shape<br/>
-    <span class="grad">Motion.</span>
+  <p class="htag">Shaping Motion</p>
+  <h1 class="hh1">
+    Nicola<br/><span class="ac">Lorusso.</span>
   </h1>
-  <div class="hero-row">
-    <p class="hero-desc">20+ years crafting visual stories for broadcasters, brands and digital platforms &mdash; from MTV to RAI, from branded content to logo animation.</p>
-    <div class="hero-actions">
-      <a href="#work" class="btn btn-primary">View Work</a>
-      <a href="#contact" class="btn btn-secondary">Start a Project</a>
+  <p class="hrole">Visual Director &amp; Motion Specialist
+    <span class="hrole-sub">Post-Production &nbsp;&middot;&nbsp; Motion Graphics &nbsp;&middot;&nbsp; Live Event Media &nbsp;&middot;&nbsp; Where strategic storytelling meets advanced motion design.</span>
+  </p>
+  <div class="hrow">
+    <p class="hdesc">
+      20+ years crafting high-end branded content, TV production and live event media across Italy and Europe. Available worldwide.
+    </p>
+    <div class="hacts">
+      <a href="#portfolio" class="btn btn-p">View Work</a>
+      <a href="#contact" class="btn btn-s">Start a Project</a>
     </div>
   </div>
-  <div class="scroll-hint">
-    <div class="scroll-line"></div>
-    <span>Scroll</span>
+  <div class="hstats">
+    <div class="hstat">
+      <div class="hstat-n">20<sub>+</sub></div>
+      <div class="hstat-l">Years on set & post</div>
+    </div>
+    <div class="hstat" style="padding-left:40px">
+      <div class="hstat-n">12<sub>+</sub></div>
+      <div class="hstat-l">TV networks</div>
+    </div>
+    <div class="hstat" style="padding-left:40px">
+      <div class="hstat-n">200<sub>+</sub></div>
+      <div class="hstat-l">Projects delivered</div>
+    </div>
+    <div class="hstat" style="padding-left:40px">
+      <div class="hstat-n">5k<sub>+</sub></div>
+      <div class="hstat-l">Hours edited</div>
+    </div>
   </div>
+  <div class="shint"><div class="sline"></div><span>Scroll</span></div>
 </section>
 
-<!-- ═══ MARQUEE ═══════════════════════════════════ -->
-<div class="marquee">
-  <div class="marquee-inner">
-    <span class="mitem">MTV</span><span class="mdot"></span>
-    <span class="mitem">Nickelodeon</span><span class="mdot"></span>
-    <span class="mitem">Paramount Channel</span><span class="mdot"></span>
-    <span class="mitem">Comedy Central</span><span class="mdot"></span>
-    <span class="mitem">RAI</span><span class="mdot"></span>
-    <span class="mitem">Mediaset</span><span class="mdot"></span>
-    <span class="mitem">Viacom</span><span class="mdot"></span>
-    <span class="mitem">DeA Kids</span><span class="mdot"></span>
-    <span class="mitem">Stand By Me</span><span class="mdot"></span>
-    <span class="mitem">Mosaicoon</span><span class="mdot"></span>
-    <span class="mitem">Connexia</span><span class="mdot"></span>
-    <span class="mitem">3D Clouds</span><span class="mdot"></span>
-    <span class="mitem">MTV</span><span class="mdot"></span>
-    <span class="mitem">Nickelodeon</span><span class="mdot"></span>
-    <span class="mitem">Paramount Channel</span><span class="mdot"></span>
-    <span class="mitem">Comedy Central</span><span class="mdot"></span>
-    <span class="mitem">RAI</span><span class="mdot"></span>
-    <span class="mitem">Mediaset</span><span class="mdot"></span>
-    <span class="mitem">Viacom</span><span class="mdot"></span>
-    <span class="mitem">DeA Kids</span><span class="mdot"></span>
-    <span class="mitem">Stand By Me</span><span class="mdot"></span>
-    <span class="mitem">Mosaicoon</span><span class="mdot"></span>
-    <span class="mitem">Connexia</span><span class="mdot"></span>
-    <span class="mitem">3D Clouds</span><span class="mdot"></span>
-  </div>
-</div>
-
-<!-- ═══ SHOWREEL ══════════════════════════════════ -->
-<section id="work" class="section">
-  <div class="sec-head reveal">
+<!-- PORTFOLIO -->
+<section id="portfolio" class="sec">
+  <div class="sechead reveal">
     <div>
-      <div class="eyebrow">Showreel</div>
-      <h2 class="stitle">Motion in Action</h2>
+      <div class="eye">Selected Work</div>
+      <h2 class="stitle">Portfolio</h2>
     </div>
-    <a href="https://vimeo.com/niloarte" target="_blank" rel="noopener" class="btn btn-secondary">Full Portfolio &#8599;</a>
+    <a href="https://vimeo.com/niloarte" target="_blank" rel="noopener" class="btn btn-s">Full Profile &#8599;</a>
   </div>
-  <div class="video-embed reveal">
-    <div class="ratio">
-      <iframe src="https://player.vimeo.com/video/282321139?color=00cfff&title=0&byline=0&portrait=0&dnt=1"
-        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="NILO Showreel"></iframe>
-    </div>
-    <div class="vid-label">
-      <div>
-        <div class="vid-cat">Showreel</div>
-        <div class="vid-name">NILO &mdash; Video &amp; Motion Showreel</div>
+
+  <!-- Filter tabs -->
+  <div class="filter-tabs reveal">
+    <span class="ftab active" data-filter="all">All Work</span>
+    <span class="ftab" data-filter="branded">Branded Content</span>
+    <span class="ftab" data-filter="tv">TV &amp; ADV</span>
+    <span class="ftab" data-filter="animation">Animation &amp; Music</span>
+    <span class="ftab" data-filter="corporate">Corporate &amp; Web</span>
+  </div>
+
+  <!-- SHOWREEL — always visible, full width -->
+  <div class="pitem reveal" data-cat="all">
+    <div class="vfeat">
+      <div class="r50">
+        <iframe src="https://player.vimeo.com/video/282321139?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="vlabel-feat">
+        <div>
+          <div class="vclient">NILO Showreel</div>
+          <div class="vrole">Video Direction &middot; Motion Design &middot; Post Production</div>
+        </div>
       </div>
     </div>
   </div>
+
+  <!-- BRANDED CONTENT row 1 -->
+  <div class="vg2 pitem reveal" data-cat="branded">
+    <div class="vcell">
+      <div class="r169">
+        <iframe src="https://player.vimeo.com/video/287654251?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="vlabel">
+        <div class="vclient">Branded Content</div>
+        <div class="vrole">Production &middot; Editing &middot; Post Production</div>
+      </div>
+    </div>
+    <div class="vcell">
+      <div class="r169">
+        <iframe src="https://player.vimeo.com/video/296874363?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="vlabel">
+        <div class="vclient">Branded Content</div>
+        <div class="vrole">Production &middot; Editing &middot; Post Production</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BRANDED CONTENT row 2 (3 col) -->
+  <div class="vg3 pitem reveal" data-cat="branded">
+    <div class="vcell">
+      <div class="r169">
+        <iframe src="https://player.vimeo.com/video/318399389?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="vlabel">
+        <div class="vclient">Branded Content</div>
+        <div class="vrole">Editing &middot; Post Production</div>
+      </div>
+    </div>
+    <div class="vcell">
+      <div class="r169">
+        <iframe src="https://player.vimeo.com/video/318401942?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="vlabel">
+        <div class="vclient">Branded Content</div>
+        <div class="vrole">Production &middot; Co-Director &middot; Post Production</div>
+      </div>
+    </div>
+    <div class="vcell">
+      <div class="r169">
+        <iframe src="https://player.vimeo.com/video/318399899?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="vlabel">
+        <div class="vclient">Branded Content</div>
+        <div class="vrole">Production &middot; Co-Director &middot; Post Production</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TV SHOWS — featured + side -->
+  <div class="vg12 pitem reveal" data-cat="tv" style="margin-top:16px">
+    <div class="vcell">
+      <div class="r169">
+        <iframe src="https://player.vimeo.com/video/287652564?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="vlabel">
+        <div class="vclient">TV Show</div>
+        <div class="vrole">Production &middot; Director &middot; Post Production</div>
+      </div>
+    </div>
+    <div class="vcell">
+      <div class="r169">
+        <iframe src="https://player.vimeo.com/video/287653330?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="vlabel">
+        <div class="vclient">TV Show</div>
+        <div class="vrole">Editing &middot; Post Production</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TV ADV 3 col -->
+  <div class="vg3 pitem reveal" data-cat="tv" style="margin-top:16px">
+    <div class="vcell">
+      <div class="r169">
+        <iframe src="https://player.vimeo.com/video/318400534?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="vlabel">
+        <div class="vclient">TV &middot; ADV</div>
+        <div class="vrole">Editing &middot; Post Production</div>
+      </div>
+    </div>
+    <div class="vcell">
+      <div class="r169">
+        <iframe src="https://player.vimeo.com/video/318398564?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="vlabel">
+        <div class="vclient">TV &middot; ADV</div>
+        <div class="vrole">Editing &middot; Post Production</div>
+      </div>
+    </div>
+    <div class="vcell">
+      <div class="r169">
+        <iframe src="https://player.vimeo.com/video/318404805?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="vlabel">
+        <div class="vclient">TV &middot; ADV</div>
+        <div class="vrole">Editing &middot; Post Production</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ANIMATION & MUSIC -->
+  <div class="pitem reveal" data-cat="animation" style="margin-top:16px">
+    <div class="vfeat">
+      <div class="r169">
+        <iframe src="https://player.vimeo.com/video/397459930?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="vlabel-feat">
+        <div>
+          <div class="vclient">Animation &amp; Music Video</div>
+          <div class="vrole">Cartoon 2D Style &middot; Direction &middot; Animation &middot; Post Production</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CORPORATE & WEB 2 col -->
+  <div class="vg2 pitem reveal" data-cat="corporate" style="margin-top:16px">
+    <div class="vcell">
+      <div class="r169">
+        <iframe src="https://player.vimeo.com/video/311487994?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="vlabel">
+        <div class="vclient">Video Ricette Magiche</div>
+        <div class="vrole">Production &middot; Motion Graphics &middot; Post Production</div>
+      </div>
+    </div>
+    <div class="vcell">
+      <div class="r169">
+        <iframe src="https://player.vimeo.com/video/318402806?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="vlabel">
+        <div class="vclient">Corporate Production</div>
+        <div class="vrole">Production &middot; Co-Director &middot; GFX &middot; Post Production</div>
+      </div>
+    </div>
+  </div>
+
 </section>
 
-<!-- ═══ BRANDED CONTENT ═══════════════════════════ -->
-<section id="branded" class="section">
-  <div class="sec-head reveal">
-    <div>
-      <div class="eyebrow">Branded Content</div>
-      <h2 class="stitle">Brand Stories</h2>
-    </div>
-  </div>
-
-  <!-- Row 1: two featured -->
-  <div class="vgrid reveal">
-    <div class="vcell">
-      <div class="ratio">
-        <iframe src="https://player.vimeo.com/video/287654251?color=00cfff&title=0&byline=0&portrait=0&dnt=1"
-          allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="vid-label">
-        <div class="vid-cat">Production &middot; Editing &middot; Post</div>
-        <div class="vid-name">Branded Content</div>
-      </div>
-    </div>
-    <div class="vcell">
-      <div class="ratio">
-        <iframe src="https://player.vimeo.com/video/296874363?color=00cfff&title=0&byline=0&portrait=0&dnt=1"
-          allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="vid-label">
-        <div class="vid-cat">Production &middot; Editing &middot; Post</div>
-        <div class="vid-name">Branded Content</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Row 2: three -->
-  <div class="vgrid-3 reveal" style="margin-top:14px;">
-    <div class="vcell">
-      <div class="ratio">
-        <iframe src="https://player.vimeo.com/video/318399389?color=00cfff&title=0&byline=0&portrait=0&dnt=1"
-          allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="vid-label">
-        <div class="vid-cat">Editing &middot; Post Production</div>
-        <div class="vid-name">Branded Content</div>
-      </div>
-    </div>
-    <div class="vcell">
-      <div class="ratio">
-        <iframe src="https://player.vimeo.com/video/318401942?color=00cfff&title=0&byline=0&portrait=0&dnt=1"
-          allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="vid-label">
-        <div class="vid-cat">Production &middot; Co-Director &middot; Post</div>
-        <div class="vid-name">Branded Content</div>
-      </div>
-    </div>
-    <div class="vcell">
-      <div class="ratio">
-        <iframe src="https://player.vimeo.com/video/318399899?color=00cfff&title=0&byline=0&portrait=0&dnt=1"
-          allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="vid-label">
-        <div class="vid-cat">Production &middot; Co-Director &middot; Post</div>
-        <div class="vid-name">Branded Content</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Row 3: two -->
-  <div class="vgrid reveal" style="margin-top:14px;">
-    <div class="vcell">
-      <div class="ratio">
-        <iframe src="https://player.vimeo.com/video/311487994?color=00cfff&title=0&byline=0&portrait=0&dnt=1"
-          allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="vid-label">
-        <div class="vid-cat">Production &middot; Motion Graphics &middot; Post</div>
-        <div class="vid-name">Web Content</div>
-      </div>
-    </div>
-    <div class="vcell">
-      <div class="ratio">
-        <iframe src="https://player.vimeo.com/video/318402806?color=00cfff&title=0&byline=0&portrait=0&dnt=1"
-          allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="vid-label">
-        <div class="vid-cat">Production &middot; Co-Director &middot; GFX &middot; Post</div>
-        <div class="vid-name">Production Pipeline</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ TV SHOWS ══════════════════════════════════ -->
-<section id="tvshows" class="section">
-  <div class="sec-head reveal">
-    <div>
-      <div class="eyebrow">TV Shows</div>
-      <h2 class="stitle">Television Direction</h2>
-    </div>
-  </div>
-  <div class="video-embed reveal">
-    <div class="ratio">
-      <iframe src="https://player.vimeo.com/video/287652564?color=00cfff&title=0&byline=0&portrait=0&dnt=1"
-        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <div class="vid-label">
-      <div class="vid-cat">Production &middot; Director &middot; Post Production</div>
-      <div class="vid-name">TV Show &mdash; Direction &amp; Post Production</div>
-    </div>
-  </div>
-  <div class="vgrid reveal" style="margin-top:14px;">
-    <div class="vcell">
-      <div class="ratio">
-        <iframe src="https://player.vimeo.com/video/287653330?color=00cfff&title=0&byline=0&portrait=0&dnt=1"
-          allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="vid-label">
-        <div class="vid-cat">Editing &middot; Post Production</div>
-        <div class="vid-name">TV Show &mdash; Editing &amp; Post</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ TV · ADV · EDITING & POST ════════════════ -->
-<section id="tvadv" class="section">
-  <div class="sec-head reveal">
-    <div>
-      <div class="eyebrow">TV &middot; ADV &middot; Editing &amp; Post Production</div>
-      <h2 class="stitle">Editing &amp; Post</h2>
-    </div>
-  </div>
-  <div class="vgrid-3 reveal">
-    <div class="vcell">
-      <div class="ratio">
-        <iframe src="https://player.vimeo.com/video/318400534?color=00cfff&title=0&byline=0&portrait=0&dnt=1"
-          allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="vid-label">
-        <div class="vid-cat">Editing &middot; Post Production</div>
-        <div class="vid-name">TV &middot; ADV</div>
-      </div>
-    </div>
-    <div class="vcell">
-      <div class="ratio">
-        <iframe src="https://player.vimeo.com/video/318398564?color=00cfff&title=0&byline=0&portrait=0&dnt=1"
-          allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="vid-label">
-        <div class="vid-cat">Editing &middot; Post Production</div>
-        <div class="vid-name">TV &middot; ADV</div>
-      </div>
-    </div>
-    <div class="vcell">
-      <div class="ratio">
-        <iframe src="https://player.vimeo.com/video/318404805?color=00cfff&title=0&byline=0&portrait=0&dnt=1"
-          allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="vid-label">
-        <div class="vid-cat">Editing &middot; Post Production</div>
-        <div class="vid-name">TV &middot; ADV</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ CARTOON 2D / MUSIC VIDEO ════════════════ -->
-<section id="cartoon" class="section">
-  <div class="sec-head reveal">
-    <div>
-      <div class="eyebrow">Cartoon 2D Style &middot; Video Musicali</div>
-      <h2 class="stitle">Animation &amp; Music</h2>
-    </div>
-  </div>
-  <div class="video-embed reveal">
-    <div class="ratio">
-      <iframe src="https://player.vimeo.com/video/397459930?color=00cfff&title=0&byline=0&portrait=0&dnt=1"
-        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <div class="vid-label">
-      <div class="vid-cat">Cartoon 2D &middot; Music Video</div>
-      <div class="vid-name">Cartoon 2D Style / Video Musicali</div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ SERVICES ══════════════════════════════════ -->
-<section id="services" class="section">
+<!-- SERVICES -->
+<section id="services" class="sec">
   <div class="reveal">
-    <div class="eyebrow">What We Do</div>
-    <h2 class="stitle">End-to-End Visual Production</h2>
+    <div class="eye">What I Deliver</div>
+    <h2 class="stitle">Services</h2>
   </div>
   <div class="svc-grid">
-    <div class="svc-card reveal">
-      <span class="svc-num">01</span>
-      <div class="svc-bar"></div>
-      <div class="svc-name">Video Production</div>
-      <div class="svc-desc">Direction and post-production for TV programs, branded formats and digital content &mdash; end-to-end, independently or leading creative teams.</div>
+    <div class="scard reveal">
+      <span class="snum">01</span>
+      <div class="sbar"></div>
+      <div class="sname">Video Direction</div>
+      <div class="sdesc">Full creative direction for branded films, corporate campaigns, TV formats and digital content — from concept to final delivery.</div>
     </div>
-    <div class="svc-card reveal">
-      <span class="svc-num">02</span>
-      <div class="svc-bar"></div>
-      <div class="svc-name">Logo &amp; Animation</div>
-      <div class="svc-desc">From identity design to animated logo sequences &mdash; dynamic brand expressions built for every platform and screen format.</div>
+    <div class="scard reveal">
+      <span class="snum">02</span>
+      <div class="sbar"></div>
+      <div class="sname">Post-Production</div>
+      <div class="sdesc">Video editing, color grading, sound design supervision and VFX compositing. Flawless delivery on every format and deadline.</div>
     </div>
-    <div class="svc-card reveal">
-      <span class="svc-num">03</span>
-      <div class="svc-bar"></div>
-      <div class="svc-name">Motion &amp; GFX</div>
-      <div class="svc-desc">Motion graphics, compositing and visual effects. Advanced After Effects workflows with AI-generated asset integration.</div>
+    <div class="scard reveal">
+      <span class="snum">03</span>
+      <div class="sbar"></div>
+      <div class="sname">Motion Design &amp; GFX</div>
+      <div class="sdesc">2D/3D animation, kinetic typography, logo animation and motion graphics — crafted in After Effects with AI-assisted workflows.</div>
     </div>
-    <div class="svc-card reveal">
-      <span class="svc-num">04</span>
-      <div class="svc-bar"></div>
-      <div class="svc-name">Digital Content</div>
-      <div class="svc-desc">Social video, marketing campaigns and online content &mdash; optimised for performance, reach and storytelling impact.</div>
+    <div class="scard reveal">
+      <span class="snum">04</span>
+      <div class="sbar"></div>
+      <div class="sname">Multi-Platform Output</div>
+      <div class="sdesc">Cross-platform optimisation for broadcast, social (9:16, 1:1), digital signage and live events. Every codec, every screen.</div>
     </div>
   </div>
 </section>
 
-<!-- ═══ ABOUT ══════════════════════════════════════ -->
-<section id="about" class="section">
+<!-- PROCESS -->
+<section id="process" class="sec">
+  <div class="reveal">
+    <div class="eye">How I Work</div>
+    <h2 class="stitle">The Creative Process</h2>
+  </div>
+  <div class="proc-list">
+    <div class="proc-item reveal">
+      <div class="proc-head">
+        <div class="proc-num">01</div>
+        <div class="proc-body">
+          <div class="proc-sub">Strategy</div>
+          <div class="proc-title">Concept Development &amp; Creative Direction</div>
+          <div class="proc-desc">Understanding your brand identity, audience, and core objectives is the foundation of every project. I translate goals into a cohesive Video Strategy through rigorous Concept Development, detailed Moodboarding, and Storyboarding. Whether it's a high-stakes corporate campaign or a brand film, I provide the Creative Direction needed to ensure every frame serves a purpose. By aligning vision with execution during pre-production, I build the roadmap for a narrative that resonates and performs.</div>
+          <div class="proc-tags">
+            <span class="ptag">Concept Development</span>
+            <span class="ptag">Moodboarding</span>
+            <span class="ptag">Storyboarding</span>
+            <span class="ptag">Creative Direction</span>
+            <span class="ptag">Video Strategy</span>
+            <span class="ptag">Pre-Production</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="proc-item reveal">
+      <div class="proc-head">
+        <div class="proc-num">02</div>
+        <div class="proc-body">
+          <div class="proc-sub">Creation</div>
+          <div class="proc-title">High-End Post-Production &amp; Motion Design</div>
+          <div class="proc-desc">This is where vision meets technical excellence. I deliver full-spectrum Post-Production services, blending rhythmic Video Editing with cinematic Color Grading. As a Motion Graphic Designer, I enhance storytelling through 2D/3D Animation, VFX Compositing, and Kinetic Typography. My process leverages AI-assisted workflows to streamline heavy tasks, ensuring rapid turnaround times and uncompromising quality. From the first Rough Cut to the final polish, I craft immersive visual experiences that capture and hold attention.</div>
+          <div class="proc-tags">
+            <span class="ptag">Video Editing</span>
+            <span class="ptag">Color Grading</span>
+            <span class="ptag">Motion Graphics</span>
+            <span class="ptag">2D/3D Animation</span>
+            <span class="ptag">VFX Compositing</span>
+            <span class="ptag">Kinetic Typography</span>
+            <span class="ptag">AI-Assisted Workflows</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="proc-item reveal">
+      <div class="proc-head">
+        <div class="proc-num">03</div>
+        <div class="proc-body">
+          <div class="proc-sub">Distribution</div>
+          <div class="proc-title">Large-Format Delivery &amp; Multi-Platform Optimisation</div>
+          <div class="proc-desc">A great story deserves a flawless technical execution, regardless of the screen size. I specialise in Large-Format Video Content tailored for Live Events, Immersive Displays, and Corporate Video Conferences, ensuring pixel-perfect clarity on massive scales. Beyond the stage, I handle Cross-Platform Optimisation for Social Media (9:16, 1:1), Digital Signage, and Broadcast. Every output is meticulously rendered with the correct Codecs (ProRes, H.264) and Aspect Ratios, ensuring your content remains impactful from a smartphone to a stadium LED wall.</div>
+          <div class="proc-tags">
+            <span class="ptag">Large-Format Video</span>
+            <span class="ptag">Live Events</span>
+            <span class="ptag">Digital Signage</span>
+            <span class="ptag">Social Media Formats</span>
+            <span class="ptag">ProRes / H.264</span>
+            <span class="ptag">Broadcast Delivery</span>
+            <span class="ptag">Multi-Platform</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="sec">
   <div class="about-grid">
     <div class="about-text reveal">
-      <div class="eyebrow">About</div>
-      <h2 class="stitle" style="margin-bottom:28px;">Nicola Lorusso</h2>
-      <p><strong>Senior video professional</strong> with 20+ years of experience across TV, branded content, corporate and digital media. Based in Milan, available worldwide.</p>
-      <p>Expert in direction, editing, motion graphics and visual storytelling &mdash; with a strong focus on <strong>innovative workflows and AI-assisted creative tools</strong>. Proven ability to manage projects end-to-end, independently or leading teams.</p>
-      <p>Collaborations span broadcasters such as MTV, Nickelodeon, RAI and Mediaset, as well as agencies, production houses and gaming companies across Europe.</p>
+      <div class="eye">About</div>
+      <h2 class="stitle" style="margin-bottom:28px">Nicola Lorusso</h2>
+      <p><strong>Senior Video Director and Motion Designer</strong> with 20+ years of experience across TV broadcasting, branded content, corporate production and digital media. Based in Milan, available for projects worldwide.</p>
+      <p>Expert in <strong>Video Direction, Post-Production, Motion Graphics and VFX Compositing</strong> — with a strong focus on innovative AI-assisted workflows. Proven track record managing complex productions end-to-end, independently or leading creative teams for broadcasters, brands and agencies.</p>
+      <p>Collaborations include MTV, Nickelodeon, Paramount Channel, RAI, Mediaset, Viacom, Comedy Central, DeA Kids and a range of production companies and digital agencies across Italy and Europe.</p>
       <div class="about-btns">
-        <a href="https://vimeo.com/niloarte" target="_blank" rel="noopener" class="btn btn-primary">Vimeo Portfolio</a>
-        <a href="mailto:niloarte@hotmail.com" class="btn btn-secondary">Contact</a>
+        <a href="https://vimeo.com/niloarte" target="_blank" rel="noopener" class="btn btn-p">Vimeo Portfolio</a>
+        <a href="/cdn-cgi/l/email-protection#86e8efeae9e7f4f2e3c6eee9f2ebe7efeaa8e5e9eb" class="btn btn-s"><span class="__cf_email__" data-cfemail="127c7b7e7d73606677527a7d667f737b7e3c717d7f">[email&#160;protected]</span></a>
       </div>
     </div>
-    <div class="stats reveal">
-      <div class="stat"><div class="stat-n">20<sub>+</sub></div><div class="stat-l">Years Experience</div></div>
-      <div class="stat"><div class="stat-n">12<sub>+</sub></div><div class="stat-l">Major TV Networks</div></div>
-      <div class="stat"><div class="stat-n">5k<sub>+</sub></div><div class="stat-l">Hours Edited</div></div>
-      <div class="stat"><div class="stat-n">MI</div><div class="stat-l">Based in Milan, IT</div></div>
-    </div>
-  </div>
-</section>
 
-<!-- ═══ TOOLS ══════════════════════════════════════ -->
-<section id="tools" class="section">
-  <div class="tools-grid">
-    <div class="reveal">
-      <div class="eyebrow">Tools &amp; Skills</div>
-      <h2 class="stitle">Craft Meets Technology</h2>
-      <p>Advanced proficiency across industry-standard software, with active integration of AI tools in production workflows.</p>
-    </div>
-    <div>
-      <div class="skill-list reveal">
-        <div class="skill-row">
-          <span class="skill-name">After Effects (Advanced)</span>
-          <div class="skill-track"><div class="skill-fill" data-w="0.97"></div></div>
-        </div>
-        <div class="skill-row">
-          <span class="skill-name">Adobe Premiere Pro</span>
-          <div class="skill-track"><div class="skill-fill" data-w="0.95"></div></div>
-        </div>
-        <div class="skill-row">
-          <span class="skill-name">DaVinci Resolve</span>
-          <div class="skill-track"><div class="skill-fill" data-w="0.88"></div></div>
-        </div>
-        <div class="skill-row">
-          <span class="skill-name">Final Cut Pro</span>
-          <div class="skill-track"><div class="skill-fill" data-w="0.85"></div></div>
-        </div>
-        <div class="skill-row">
-          <span class="skill-name">Photoshop / Illustrator</span>
-          <div class="skill-track"><div class="skill-fill" data-w="0.90"></div></div>
-        </div>
-        <div class="skill-row">
-          <span class="skill-name">AI Video &amp; Image Tools</span>
-          <div class="skill-track"><div class="skill-fill" data-w="0.80"></div></div>
-        </div>
-      </div>
-      <div class="tags">
-        <span class="tag">Adobe CC</span>
-        <span class="tag">After Effects</span>
-        <span class="tag">DaVinci Resolve</span>
-        <span class="tag">Final Cut Pro</span>
-        <span class="tag">Premiere Pro</span>
-        <span class="tag">macOS</span>
-        <span class="tag">Windows</span>
-        <span class="tag ai">AI Video</span>
-        <span class="tag ai">AI Image</span>
-        <span class="tag ai">AI Previs</span>
+    <div class="skills-panel reveal">
+      <div class="eye" style="margin-bottom:24px">Tools &amp; Expertise</div>
+      <div class="skill-row"><span class="sk-name">After Effects (Advanced)</span><div class="sk-track"><div class="sk-fill" data-w="0.97"></div></div></div>
+      <div class="skill-row"><span class="sk-name">Adobe Premiere Pro</span><div class="sk-track"><div class="sk-fill" data-w="0.95"></div></div></div>
+      <div class="skill-row"><span class="sk-name">DaVinci Resolve</span><div class="sk-track"><div class="sk-fill" data-w="0.88"></div></div></div>
+      <div class="skill-row"><span class="sk-name">Final Cut Pro</span><div class="sk-track"><div class="sk-fill" data-w="0.85"></div></div></div>
+      <div class="skill-row"><span class="sk-name">Photoshop / Illustrator</span><div class="sk-track"><div class="sk-fill" data-w="0.90"></div></div></div>
+      <div class="skill-row"><span class="sk-name">AI Video &amp; Image Tools</span><div class="sk-track"><div class="sk-fill" data-w="0.82"></div></div></div>
+      <div class="tags" style="margin-top:20px">
+        <span class="tag">Adobe CC</span><span class="tag">After Effects</span>
+        <span class="tag">DaVinci Resolve</span><span class="tag">Final Cut Pro</span>
+        <span class="tag">Premiere Pro</span><span class="tag">macOS</span><span class="tag">Windows</span>
+        <span class="tag ai">AI Video Gen</span><span class="tag ai">AI Image Gen</span><span class="tag ai">AI Previs</span>
       </div>
     </div>
   </div>
+
+  <!-- Soft skills -->
+  <div class="reveal" style="margin-top:72px">
+    <div class="eye">Professional Profile</div>
+    <h3 class="stitle" style="font-size:clamp(26px,3vw,42px);margin-bottom:32px">Beyond the Technical</h3>
+  </div>
+  <div class="soft-grid reveal">
+    <div class="softcard">
+      <div class="soft-icon">&#127916;</div>
+      <div class="soft-title">Creative Storytelling</div>
+      <div class="soft-desc">Exceptional ability to translate abstract briefs into compelling visual narratives that connect with audiences and drive brand recall.</div>
+    </div>
+    <div class="softcard">
+      <div class="soft-icon">&#9201;</div>
+      <div class="soft-title">Deadline-Driven Execution</div>
+      <div class="soft-desc">Proven ability to deliver broadcast-quality work on tight deadlines in fast-paced, high-pressure broadcast and agency environments.</div>
+    </div>
+    <div class="softcard">
+      <div class="soft-icon">&#129309;</div>
+      <div class="soft-title">Client Communication</div>
+      <div class="soft-desc">Clear, structured communication with clients and stakeholders at every production stage — from brief to final delivery sign-off.</div>
+    </div>
+    <div class="softcard">
+      <div class="soft-icon">&#127757;</div>
+      <div class="soft-title">Cross-Cultural Collaboration</div>
+      <div class="soft-desc">Experienced working with international agencies, brands and crews across Italy and Europe in Italian, English and Spanish.</div>
+    </div>
+    <div class="softcard">
+      <div class="soft-icon">&#128161;</div>
+      <div class="soft-title">Creative Problem-Solving</div>
+      <div class="soft-desc">Resourceful in finding elegant visual solutions within budget and technical constraints — turning limitations into creative opportunities.</div>
+    </div>
+    <div class="softcard">
+      <div class="soft-icon">&#129504;</div>
+      <div class="soft-title">AI-Forward Mindset</div>
+      <div class="soft-desc">Continuous adoption of emerging AI tools for pre-visualisation, asset generation and workflow automation to maximise output quality and efficiency.</div>
+    </div>
+  </div>
+  <!-- Languages -->
+  <div class="reveal" style="margin-top:72px">
+    <div class="eye">Languages</div>
+    <h3 class="stitle" style="font-size:clamp(24px,2.8vw,38px);margin-bottom:28px">Lingue Parlate</h3>
+    <div class="lang-grid">
+      <div class="lang-card"><span class="lang-name">Italiano</span><span class="lang-level">Native</span></div>
+      <div class="lang-card"><span class="lang-name">English</span><span class="lang-level">B1</span></div>
+      <div class="lang-card"><span class="lang-name">Español</span><span class="lang-level">B2</span></div>
+    </div>
+  </div>
+
 </section>
 
-<!-- ═══ PROCESS ════════════════════════════════════ -->
-<section id="process" class="section">
-  <div class="reveal">
-    <div class="eyebrow">How We Work</div>
-    <h2 class="stitle">Three Steps to Extraordinary</h2>
-  </div>
-  <div class="proc-grid">
-    <div class="proc-step reveal">
-      <div class="proc-bg">01</div>
-      <div class="proc-bar"></div>
-      <div class="proc-title">Strategy</div>
-      <div class="proc-desc">Understanding your brand, audience and goals. Concept development, moodboards and creative direction &mdash; before a single frame is shot or rendered.</div>
-    </div>
-    <div class="proc-step reveal">
-      <div class="proc-bg">02</div>
-      <div class="proc-bar"></div>
-      <div class="proc-title">Creation</div>
-      <div class="proc-desc">Direction, editing, motion graphics and compositing. Full post-production supervision with AI-assisted workflows for speed without compromise.</div>
-    </div>
-    <div class="proc-step reveal">
-      <div class="proc-bg">03</div>
-      <div class="proc-bar"></div>
-      <div class="proc-title">Distribution</div>
-      <div class="proc-desc">Delivery optimised for every platform &mdash; broadcast, social, digital. Format, aspect ratio and compression handled with care.</div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ CTA ════════════════════════════════════════ -->
+<!-- CTA -->
 <section id="contact">
   <div class="reveal">
-    <div class="eyebrow" style="justify-content:center;">Get in Touch</div>
-    <h2 class="cta-title">
-      Let's Build<br/>Something That<br/><span class="grad">Moves.</span>
+    <div class="eye" style="justify-content:center">Start a Project</div>
+    <h2 class="cta-t">
+      Let's Create<br/>Something That<br/><span class="ac">Moves.</span>
     </h2>
-    <p class="cta-sub">Ready to bring your next project to life? Get in touch to discuss your vision.</p>
+    <p class="cta-sub">Available for branded content, TV production, corporate video, motion design and post-production projects worldwide.</p>
     <div class="cta-btns">
-      <a href="mailto:niloarte@hotmail.com" class="btn btn-primary">niloarte@hotmail.com</a>
-      <a href="tel:+393384354240" class="btn-link">
+      <a href="/cdn-cgi/l/email-protection#a6c8cfcac9c7d4d2c3e6cec9d2cbc7cfca88c5c9cb" class="btn btn-p"><span class="__cf_email__" data-cfemail="b0ded9dcdfd1c2c4d5f0d8dfc4ddd1d9dc9ed3dfdd">[email&#160;protected]</span></a>
+      <a href="tel:+393384354240" class="btn-lnk">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.73a16 16 0 006.29 6.29l1.1-1.1a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
         +39 338 435 4240
       </a>
-      <a href="https://vimeo.com/niloarte" target="_blank" rel="noopener" class="btn-link">
+      <a href="https://vimeo.com/niloarte" target="_blank" rel="noopener" class="btn-lnk">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M23.977 6.416c-.105 2.338-1.739 5.543-4.894 9.609-3.268 4.247-6.026 6.37-8.29 6.37-1.409 0-2.578-1.294-3.553-3.881L5.322 12.5C4.603 9.913 3.83 8.619 3 8.619c-.203 0-.906.427-2.109 1.282L0 8.71c1.329-1.17 2.639-2.339 3.917-3.517C5.579 3.705 6.851 2.913 7.697 2.83c2.012-.19 3.244 1.18 3.699 4.113.495 3.157.838 5.121 1.027 5.891.57 2.578 1.194 3.868 1.876 3.868.532 0 1.337-.842 2.413-2.525 1.079-1.682 1.658-2.966 1.73-3.852.145-1.458-.42-2.193-1.73-2.193-.615 0-1.248.141-1.896.435 1.26-4.127 3.666-6.132 7.215-6.013 2.629.08 3.874 1.786 3.946 5.862z"/></svg>
         Vimeo Portfolio
       </a>
@@ -1008,122 +664,139 @@ footer {
   </div>
 </section>
 
-<!-- ═══ FOOTER ══════════════════════════════════════ -->
+<!-- CLIENTS MARQUEE (bottom) -->
+<div class="mq">
+  <div class="mq-inner">
+    <span class="mi">MTV</span><span class="md"></span>
+    <span class="mi">Nickelodeon</span><span class="md"></span>
+    <span class="mi">Paramount Channel</span><span class="md"></span>
+    <span class="mi">Comedy Central</span><span class="md"></span>
+    <span class="mi">RAI</span><span class="md"></span>
+    <span class="mi">Mediaset</span><span class="md"></span>
+    <span class="mi">Viacom</span><span class="md"></span>
+    <span class="mi">DeA Kids</span><span class="md"></span>
+    <span class="mi">Stand By Me</span><span class="md"></span>
+    <span class="mi">Mosaicoon</span><span class="md"></span>
+    <span class="mi">Connexia</span><span class="md"></span>
+    <span class="mi">3D Clouds</span><span class="md"></span>
+    <span class="mi">YAM112003</span><span class="md"></span>
+    <span class="mi">Bearoll</span><span class="md"></span>
+    <span class="mi">Due-B Produzioni</span><span class="md"></span>
+    <span class="mi">Social Content Factory</span><span class="md"></span>
+    <span class="mi">MTV</span><span class="md"></span>
+    <span class="mi">Nickelodeon</span><span class="md"></span>
+    <span class="mi">Paramount Channel</span><span class="md"></span>
+    <span class="mi">Comedy Central</span><span class="md"></span>
+    <span class="mi">RAI</span><span class="md"></span>
+    <span class="mi">Mediaset</span><span class="md"></span>
+    <span class="mi">Viacom</span><span class="md"></span>
+    <span class="mi">DeA Kids</span><span class="md"></span>
+    <span class="mi">Stand By Me</span><span class="md"></span>
+    <span class="mi">Mosaicoon</span><span class="md"></span>
+    <span class="mi">Connexia</span><span class="md"></span>
+    <span class="mi">3D Clouds</span><span class="md"></span>
+    <span class="mi">YAM112003</span><span class="md"></span>
+    <span class="mi">Bearoll</span><span class="md"></span>
+    <span class="mi">Due-B Produzioni</span><span class="md"></span>
+    <span class="mi">Social Content Factory</span><span class="md"></span>
+  </div>
+</div>
+
+<!-- FOOTER -->
 <footer>
-  <div class="f-logo">NILO</div>
-  <div class="f-copy">&copy; NILO Studio &middot; Nicola Lorusso &middot; Sesto San Giovanni, Milan</div>
-  <nav class="f-nav">
-    <a href="#work">Work</a>
+  <div class="flogo">NILO</div>
+  <div class="fcopy">&copy; 2025 Nicola Lorusso &middot; Video Director &amp; Motion Designer &middot; Milan, Italy</div>
+  <nav class="fnav">
+    <a href="#portfolio">Work</a>
     <a href="#services">Services</a>
+    <a href="#process">Process</a>
     <a href="#about">About</a>
-    <a href="mailto:niloarte@hotmail.com">Contact</a>
+    <a href="/cdn-cgi/l/email-protection#214f484d4e4053554461494e554c40484d0f424e4c">Contact</a>
   </nav>
 </footer>
 
-<!-- ═══ SCRIPTS ════════════════════════════════════ -->
-<script>
-/* ── ANIMATED CANVAS BACKGROUND ───────────────── */
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+/* CANVAS */
 (function(){
-  const cv = document.getElementById('bgc');
-  const cx = cv.getContext('2d');
-  let W, H;
-  const resize = () => { W = cv.width = innerWidth; H = cv.height = innerHeight; };
-  resize();
-  window.addEventListener('resize', resize);
-
-  const PALETTE = [
-    ['rgba(0,180,255,',  'rgba(0,210,255,'],
-    ['rgba(26,111,255,', 'rgba(0,180,255,'],
-    ['rgba(124,79,255,', 'rgba(26,111,255,'],
-    ['rgba(0,184,160,',  'rgba(0,210,255,'],
-    ['rgba(26,111,255,', 'rgba(124,79,255,'],
+  const cv=document.getElementById('bgc'),cx=cv.getContext('2d');
+  let W,H;
+  const rsz=()=>{W=cv.width=innerWidth;H=cv.height=innerHeight};
+  rsz();window.addEventListener('resize',rsz);
+  const P=[
+    ['rgba(0,180,255,','rgba(0,210,255,'],
+    ['rgba(26,111,255,','rgba(0,180,255,'],
+    ['rgba(124,79,255,','rgba(26,111,255,'],
+    ['rgba(0,184,160,','rgba(0,210,255,'],
+    ['rgba(26,111,255,','rgba(124,79,255,'],
   ];
-
-  function mkStreak() {
-    const c = PALETTE[Math.floor(Math.random() * PALETTE.length)];
-    const angle = (Math.random() * 70 + 10) * Math.PI / 180 * (Math.random() > 0.45 ? 1 : -1);
-    return {
-      x: Math.random() * W * 1.3 - W * 0.15,
-      y: Math.random() * H * 0.65 - H * 0.05,
-      dx: Math.cos(angle), dy: Math.sin(angle),
-      len: Math.random() * 480 + 160,
-      spd: Math.random() * 0.003 + 0.0015,
-      t: Math.random() * 2.5,
-      life: 1.5 + Math.random() * 2.5,
-      c0: c[0], c1: c[1],
-      maxA: Math.random() * 0.5 + 0.12,
-      w: Math.random() * 2.2 + 0.4,
-      curve: (Math.random() - 0.5) * 0.011,
-      angle,
-    };
+  function mk(){
+    const c=P[Math.floor(Math.random()*P.length)];
+    const a=(Math.random()*70+10)*Math.PI/180*(Math.random()>.45?1:-1);
+    return{x:Math.random()*W*1.3-W*.15,y:Math.random()*H*.65-H*.05,
+      dx:Math.cos(a),dy:Math.sin(a),len:Math.random()*480+160,
+      spd:Math.random()*.003+.0015,t:Math.random()*2.5,life:1.5+Math.random()*2.5,
+      c0:c[0],c1:c[1],maxA:Math.random()*.5+.12,w:Math.random()*2.2+.4,
+      curve:(Math.random()-.5)*.011,angle:a};
   }
-
-  const streaks = Array.from({ length: 16 }, mkStreak);
-  let last = 0;
-
-  function frame(ts) {
-    const dt = Math.min((ts - last) / 1000, 0.05);
-    last = ts;
-    cx.clearRect(0, 0, W, H);
-
-    // Ambient deep blue glow top-right
-    const amb = cx.createRadialGradient(W * 0.72, H * 0.2, 0, W * 0.72, H * 0.2, W * 0.65);
-    amb.addColorStop(0, 'rgba(5,12,48,0.55)');
-    amb.addColorStop(1, 'rgba(0,0,0,0)');
-    cx.fillStyle = amb;
-    cx.fillRect(0, 0, W, H);
-
-    for (let i = 0; i < streaks.length; i++) {
-      const s = streaks[i];
-      s.t += dt * s.spd * 60;
-      if (s.t > s.life) { streaks[i] = mkStreak(); continue; }
-      const p = s.t / s.life;
-      const a = p < 0.12 ? (p / 0.12) * s.maxA : p > 0.72 ? ((1 - p) / 0.28) * s.maxA : s.maxA;
-      s.angle += s.curve * dt;
-      s.dx = Math.cos(s.angle); s.dy = Math.sin(s.angle);
-      const tl = s.len * Math.min(p * 3, 1);
-      const x2 = s.x + s.dx * tl, y2 = s.y + s.dy * tl;
-      const gr = cx.createLinearGradient(s.x, s.y, x2, y2);
-      gr.addColorStop(0,    s.c0 + '0)');
-      gr.addColorStop(0.25, s.c0 + (a * 0.35).toFixed(3) + ')');
-      gr.addColorStop(0.75, s.c1 + a.toFixed(3) + ')');
-      gr.addColorStop(1,    s.c1 + '0)');
-      cx.beginPath(); cx.moveTo(s.x, s.y); cx.lineTo(x2, y2);
-      cx.strokeStyle = gr; cx.lineWidth = s.w; cx.lineCap = 'round';
-      cx.shadowBlur = 20; cx.shadowColor = s.c1 + (a * 0.5).toFixed(3) + ')';
-      cx.stroke(); cx.shadowBlur = 0;
-      s.x += s.dx * s.spd * 110 * dt; s.y += s.dy * s.spd * 110 * dt;
+  const S=Array.from({length:16},mk);
+  let lt=0;
+  function fr(ts){
+    const dt=Math.min((ts-lt)/1000,.05);lt=ts;
+    cx.clearRect(0,0,W,H);
+    const g=cx.createRadialGradient(W*.72,H*.2,0,W*.72,H*.2,W*.65);
+    g.addColorStop(0,'rgba(5,12,48,.55)');g.addColorStop(1,'rgba(0,0,0,0)');
+    cx.fillStyle=g;cx.fillRect(0,0,W,H);
+    for(let i=0;i<S.length;i++){
+      const s=S[i];s.t+=dt*s.spd*60;
+      if(s.t>s.life){S[i]=mk();continue;}
+      const p=s.t/s.life;
+      const al=p<.12?(p/.12)*s.maxA:p>.72?((1-p)/.28)*s.maxA:s.maxA;
+      s.angle+=s.curve*dt;s.dx=Math.cos(s.angle);s.dy=Math.sin(s.angle);
+      const tl=s.len*Math.min(p*3,1);
+      const x2=s.x+s.dx*tl,y2=s.y+s.dy*tl;
+      const gr=cx.createLinearGradient(s.x,s.y,x2,y2);
+      gr.addColorStop(0,s.c0+'0)');gr.addColorStop(.25,s.c0+(al*.35).toFixed(3)+')');
+      gr.addColorStop(.75,s.c1+al.toFixed(3)+')');gr.addColorStop(1,s.c1+'0)');
+      cx.beginPath();cx.moveTo(s.x,s.y);cx.lineTo(x2,y2);
+      cx.strokeStyle=gr;cx.lineWidth=s.w;cx.lineCap='round';
+      cx.shadowBlur=20;cx.shadowColor=s.c1+(al*.5).toFixed(3)+')';
+      cx.stroke();cx.shadowBlur=0;
+      s.x+=s.dx*s.spd*110*dt;s.y+=s.dy*s.spd*110*dt;
     }
-    requestAnimationFrame(frame);
+    requestAnimationFrame(fr);
   }
-  requestAnimationFrame(frame);
+  requestAnimationFrame(fr);
 })();
 
-/* ── NAV SCROLL STATE ──────────────────────────── */
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 60);
-}, { passive: true });
+/* NAV */
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('on',scrollY>60),{passive:true});
 
-/* ── REVEAL ON SCROLL ──────────────────────────── */
-const io = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (!e.isIntersecting) return;
-    e.target.classList.add('visible');
-    e.target.querySelectorAll('.skill-fill').forEach(bar => {
-      bar.style.transform = `scaleX(${bar.dataset.w})`;
-      bar.classList.add('go');
+/* REVEAL */
+const io=new IntersectionObserver(e=>{
+  e.forEach(x=>{
+    if(!x.isIntersecting)return;
+    x.target.classList.add('on');
+    x.target.querySelectorAll('.sk-fill').forEach(b=>{
+      b.style.transform=`scaleX(${b.dataset.w})`;b.classList.add('go');
     });
-    io.unobserve(e.target);
+    io.unobserve(x.target);
   });
-}, { threshold: 0.08 });
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+},{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-/* ── SMOOTH SCROLL ─────────────────────────────── */
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const target = document.querySelector(a.getAttribute('href'));
-    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+/* PORTFOLIO FILTER */
+const tabs=document.querySelectorAll('.ftab');
+const items=document.querySelectorAll('.pitem');
+tabs.forEach(tab=>{
+  tab.addEventListener('click',()=>{
+    tabs.forEach(t=>t.classList.remove('active'));
+    tab.classList.add('active');
+    const f=tab.dataset.filter;
+    items.forEach(item=>{
+      const cats=item.dataset.cat||'all';
+      if(f==='all'||cats.split(' ').includes(f)){item.classList.remove('hidden')}else{item.classList.add('hidden')}
+    });
   });
 });
 </script>
