@@ -3,14 +3,39 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta name="description" content="Nicola Lorusso — Visual Director & Motion Specialist based in Milan. Post-Production, Motion Graphics, Live Event Media. Where strategic storytelling meets advanced motion design."/>
-<meta name="keywords" content="visual director Milan, motion specialist, post production, motion graphics, live event media, branded content, after effects, VFX compositing, video editing, TV production, color grading, 2D animation"/>
-<title>NILO — Nicola Lorusso · Visual Director & Motion Specialist · Milan</title>
+<meta name="description" content="Nicola Lorusso — Visual Director &amp; Motion Specialist based in Milan. Post-Production, Motion Graphics and Live Event Media. Shaping strategic storytelling through advanced motion design for brands, broadcasters and agencies worldwide."/>
+<meta name="keywords" content="visual director Milan, motion designer Italy, post production specialist, branded content video, motion graphics after effects, VFX compositing, video editing Milan, corporate video Italy, TV production, color grading, 2D animation, live event media, Nicola Lorusso"/>
+<meta property="og:title" content="NILO — Nicola Lorusso · Visual Director &amp; Motion Specialist"/>
+<meta property="og:description" content="20+ years shaping high-end branded content, TV production and live event media across Italy and Europe. Available worldwide."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://niloarte.com"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="NILO — Nicola Lorusso · Visual Director &amp; Motion Specialist"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://niloarte.com"/>
+<title>NILO — Nicola Lorusso · Visual Director &amp; Motion Specialist · Milan</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Nicola Lorusso",
+  "alternateName":"NILO",
+  "jobTitle":"Visual Director &amp; Motion Specialist",
+  "description":"Visual Director and Motion Specialist with 20+ years of experience in branded content, TV production, motion graphics, VFX compositing and AI-assisted post-production workflows.",
+  "url":"https://niloarte.com",
+  "sameAs":["https://vimeo.com/niloarte"],
+  "address":{"@type":"PostalAddress","addressLocality":"Milan","addressRegion":"Lombardy","addressCountry":"IT"},
+  "knowsLanguage":["it","en","es"],
+  "knowsAbout":["Video Direction","Post-Production","Motion Graphics","VFX Compositing","After Effects","Color Grading","Branded Content","TV Production","2D Animation","Live Event Media","Adobe Premiere Pro","DaVinci Resolve"]
+}
+</script>
+
 <style>
-/* ── RESET ───────────────────────────────────── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --bg:#03030e;--surf:#07071a;--white:#eaedf5;--gray:#7a8099;--muted:#b0b7d0;
@@ -21,20 +46,15 @@
   --brd:rgba(255,255,255,0.07);--brdh:rgba(0,207,255,0.28);
   --ft:'Bebas Neue',sans-serif;--fb:'Inter',sans-serif;
 }
-html{scroll-behavior:smooth}
+html{scroll-behavior:auto}
 body{background:var(--bg);color:var(--white);font-family:var(--fb);font-weight:300;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 
-/* ── CANVAS ─────────────────────────────────── */
+/* CANVAS */
 #bgc{position:fixed;inset:0;z-index:0;pointer-events:none}
 
-/* ── NAV ─────────────────────────────────────── */
-#nav{
-  position:fixed;top:0;left:0;right:0;height:70px;z-index:999;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 60px;
-  transition:background .35s,border-color .35s;
-}
-#nav.on{background:rgba(3,3,14,.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--brd)}
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;height:70px;z-index:999;display:flex;align-items:center;justify-content:space-between;padding:0 60px;transition:background .35s,border-color .35s}
+#nav.on{background:rgba(3,3,14,.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--brd)}
 .logo{font-family:var(--ft);font-size:26px;letter-spacing:.14em;color:var(--white);text-decoration:none;position:relative;flex-shrink:0}
 .logo::after{content:'';position:absolute;bottom:-5px;left:0;width:100%;height:2px;background:var(--g1);border-radius:2px}
 .nmenu{display:flex;align-items:center;gap:34px;list-style:none}
@@ -43,44 +63,35 @@ body{background:var(--bg);color:var(--white);font-family:var(--fb);font-weight:3
 .ncta{font-size:11px!important;font-weight:600!important;color:#fff!important;background:var(--g1);padding:9px 22px;border-radius:30px;letter-spacing:.1em!important;box-shadow:0 0 22px var(--glow);transition:opacity .2s,transform .2s!important}
 .ncta:hover{opacity:.82;transform:translateY(-1px)}
 
-/* ── HERO ─────────────────────────────────────── */
+/* HERO */
 #hero{position:relative;z-index:10;min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 60px 90px;padding-top:70px}
 .htag{font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);margin-bottom:22px;opacity:0;animation:fu .8s ease .3s forwards}
 .hh1{font-family:var(--ft);font-size:clamp(76px,12vw,158px);letter-spacing:.02em;line-height:.9;text-transform:uppercase;color:var(--white);opacity:0;animation:fu .9s ease .5s forwards}
 .hh1 .ac{background:var(--g2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hrole-block{opacity:0;animation:fu .9s ease .62s forwards;margin-top:18px}
+.hrole-title{font-family:var(--ft);font-size:clamp(15px,1.6vw,20px);letter-spacing:.2em;text-transform:uppercase;color:var(--white);line-height:1.3}
+.hrole-sub{font-size:14px;font-weight:300;letter-spacing:.04em;color:var(--muted);margin-top:7px;font-style:italic}
 .hrow{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;margin-top:44px;flex-wrap:wrap;opacity:0;animation:fu .9s ease .7s forwards}
 .hdesc{font-size:15px;color:var(--muted);max-width:480px;line-height:1.82}
-/* hero role */
-.hrole{font-size:13px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--white);margin-top:18px;opacity:0;animation:fu .9s ease .65s forwards;line-height:1.9}
-.hrole .hrole-sub{display:block;font-size:12px;font-weight:400;letter-spacing:.06em;color:var(--muted);text-transform:none;margin-top:5px}
-/* languages */
-.lang-grid{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.lang-card{display:flex;flex-direction:column;align-items:center;padding:18px 32px;border:1px solid var(--brd);border-radius:10px;background:rgba(255,255,255,.018);transition:background .3s,border-color .3s;gap:6px;min-width:120px}
-.lang-card:hover{background:rgba(255,255,255,.035);border-color:var(--brdh)}
-.lang-name{font-family:var(--ft);font-size:19px;letter-spacing:.08em;color:var(--white)}
-.lang-level{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan)}
 .hacts{display:flex;gap:14px;flex-shrink:0}
-/* hero stats strip */
 .hstats{display:flex;gap:0;margin-top:56px;border-top:1px solid var(--brd);opacity:0;animation:fu .9s ease .9s forwards}
 .hstat{flex:1;padding:24px 0 0;border-right:1px solid var(--brd)}
 .hstat:last-child{border-right:none}
 .hstat-n{font-family:var(--ft);font-size:38px;letter-spacing:-.02em;color:var(--white);line-height:1}
 .hstat-n sub{font-size:18px;color:var(--cyan);vertical-align:baseline}
 .hstat-l{font-size:10px;color:var(--gray);letter-spacing:.1em;text-transform:uppercase;margin-top:4px}
-
-/* scroll hint */
 .shint{position:absolute;right:60px;bottom:40px;display:flex;flex-direction:column;align-items:center;gap:10px;opacity:0;animation:fi 1s ease 1.4s forwards}
 .shint span{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gray);writing-mode:vertical-lr}
 .sline{width:1px;height:54px;background:linear-gradient(to bottom,var(--cyan),transparent);animation:pls 2s ease-in-out infinite}
 
-/* ── BUTTONS ─────────────────────────────────── */
+/* BUTTONS */
 .btn{display:inline-block;font-family:var(--fb);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:13px 30px;border-radius:30px;text-decoration:none;cursor:pointer;border:none;transition:all .25s}
 .btn-p{background:var(--g1);color:#fff;box-shadow:0 0 28px var(--glow)}
 .btn-p:hover{box-shadow:0 0 50px var(--glow);transform:translateY(-2px)}
 .btn-s{background:transparent;color:var(--white);border:1px solid var(--brdh)}
 .btn-s:hover{background:rgba(0,207,255,.07);border-color:rgba(0,207,255,.55);transform:translateY(-2px)}
 
-/* ── SECTIONS ────────────────────────────────── */
+/* SECTIONS */
 .sec{position:relative;z-index:10;padding:100px 60px;border-top:1px solid var(--brd)}
 .eye{display:flex;align-items:center;gap:12px;font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);margin-bottom:12px}
 .eye::before{content:'';width:24px;height:1px;background:var(--cyan);flex-shrink:0}
@@ -89,72 +100,78 @@ body{background:var(--bg);color:var(--white);font-family:var(--fb);font-weight:3
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
 .reveal.on{opacity:1;transform:none}
 
-/* ── PORTFOLIO FILTER TABS ───────────────────── */
+/* FILTER TABS */
 .filter-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:40px}
 .ftab{font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border:1px solid var(--brd);padding:7px 18px;border-radius:30px;cursor:pointer;transition:all .2s;background:transparent;user-select:none}
 .ftab:hover{border-color:var(--brdh);color:var(--white)}
 .ftab.active{background:var(--g1);color:#fff;border-color:transparent;box-shadow:0 0 18px var(--glow)}
 
-/* ── VIDEO LAYOUT ────────────────────────────── */
-/* Featured 16:9 */
+/* VIDEO LAYOUT */
 .vfeat{border-radius:14px;overflow:hidden;background:var(--surf);border:1px solid var(--brdh);box-shadow:0 0 50px rgba(0,180,255,.1);transition:box-shadow .3s}
 .vfeat:hover{box-shadow:0 0 80px rgba(0,207,255,.16)}
 .r169{position:relative;padding-bottom:56.25%}
-.r169 iframe,.r50 iframe{position:absolute;inset:0;width:100%;height:100%;border:none;display:block}
 .r50{position:relative;padding-bottom:50%}
-
-/* Grid 2 col */
+.r169 iframe,.r50 iframe{position:absolute;inset:0;width:100%;height:100%;border:none;display:block}
 .vg2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
-/* Grid 3 col */
 .vg3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:16px}
-/* Grid 1+2 asymmetric */
 .vg12{display:grid;grid-template-columns:1.6fr 1fr;gap:16px;margin-top:16px}
-
 .vcell{background:var(--surf);border:1px solid var(--brd);border-radius:12px;overflow:hidden;transition:border-color .3s,box-shadow .3s,transform .3s}
 .vcell:hover{border-color:var(--brdh);box-shadow:0 0 28px rgba(0,207,255,.09);transform:translateY(-3px)}
 
-/* Video label */
-.vlabel{padding:14px 18px;border-top:1px solid var(--brd)}
-.vlabel-feat{display:flex;align-items:center;justify-content:space-between;padding:16px 22px;border-top:1px solid var(--brd);gap:12px}
-.vclient{font-family:var(--ft);font-size:16px;letter-spacing:.06em;color:var(--white);text-transform:uppercase}
-.vrole{font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);margin-top:3px}
+/* VIDEO OVERLAY — visible on freeze frame, fades on hover so play is unobstructed */
+.vov{position:absolute;bottom:0;left:0;right:0;padding:48px 14px 11px;background:linear-gradient(to top,rgba(3,3,14,.8) 0%,rgba(3,3,14,.0) 55%);pointer-events:none;display:flex;align-items:flex-end;transition:opacity .28s ease}
+.r169:hover .vov,.r50:hover .vov{opacity:0}
+.vov-badge{display:inline-flex;flex-direction:column;gap:2px;background:rgba(0,0,18,.6);border:1px solid rgba(0,207,255,.38);border-radius:4px;padding:5px 11px;backdrop-filter:blur(8px);max-width:calc(100% - 10px)}
+.vov-label{font-size:8px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan)}
+.vov-name{font-family:var(--ft);font-size:14px;letter-spacing:.08em;color:var(--white);text-transform:uppercase;line-height:1.1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
-/* portfolio items hidden when filtered */
+/* VIDEO INFO BOX (below video) */
+.vinfo{padding:14px 18px;border-top:1px solid var(--brd);display:grid;grid-template-columns:1fr 1fr;gap:0}
+.vinfo-col{padding:10px 14px}
+.vinfo-col:first-child{border-right:1px solid var(--brd)}
+.vinfo-key{font-size:9px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);margin-bottom:5px}
+.vinfo-val{font-size:13px;color:var(--white);font-weight:400;line-height:1.4}
+.vinfo-roles{font-size:11px;color:var(--muted);line-height:1.5}
+
+/* featured vlabel */
+.vlabel-feat{display:flex;align-items:center;justify-content:space-between;padding:16px 22px;border-top:1px solid var(--brd);gap:12px}
+.vclient-lg{font-family:var(--ft);font-size:18px;letter-spacing:.06em;color:var(--white);text-transform:uppercase}
+.vrole-sm{font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);margin-top:3px}
+
+/* portfolio items */
 .pitem{transition:opacity .35s,transform .35s}
 .pitem.hidden{display:none}
 
-/* ── SERVICES ────────────────────────────────── */
+/* SERVICES with background illustrations */
 .svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:52px}
-.scard{padding:40px 28px;background:rgba(255,255,255,.018);border:1px solid var(--brd);position:relative;overflow:hidden;transition:background .3s}
+.scard{padding:40px 28px;background:rgba(255,255,255,.018);border:1px solid var(--brd);position:relative;overflow:hidden;transition:background .3s;min-height:320px}
 .scard::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,207,255,.07),rgba(124,79,255,.04));opacity:0;transition:opacity .3s}
-.scard::after{content:'';position:absolute;top:0;right:0;width:64px;height:64px;background:radial-gradient(circle at top right,rgba(0,207,255,.22),transparent 70%);opacity:0;transition:opacity .3s}
-.scard:hover{background:rgba(255,255,255,.035)}
-.scard:hover::before,.scard:hover::after{opacity:1}
+.scard:hover{background:rgba(255,255,255,.032)}
+.scard:hover::before{opacity:1}
+.scard-bg{position:absolute;inset:0;opacity:.28;transition:opacity .4s;display:flex;align-items:center;justify-content:center}
+.scard:hover .scard-bg{opacity:.5}
 .snum{font-family:var(--ft);font-size:48px;color:rgba(255,255,255,.04);line-height:1;margin-bottom:30px;display:block;position:relative;z-index:1}
 .sbar{width:26px;height:2px;background:var(--g1);border-radius:2px;margin-bottom:16px;position:relative;z-index:1}
 .sname{font-family:var(--ft);font-size:19px;letter-spacing:.06em;text-transform:uppercase;color:var(--white);margin-bottom:10px;position:relative;z-index:1}
 .sdesc{font-size:13px;color:var(--gray);line-height:1.75;position:relative;z-index:1}
 
-/* ── PROCESS (full-width accordion-style) ────── */
+/* PROCESS */
 .proc-list{margin-top:52px;display:flex;flex-direction:column;gap:2px}
 .proc-item{border:1px solid var(--brd);background:rgba(255,255,255,.018);overflow:hidden;transition:background .3s}
 .proc-item:hover{background:rgba(255,255,255,.03)}
-.proc-head{display:grid;grid-template-columns:100px 1fr;align-items:start;padding:44px 48px;gap:32px;cursor:default}
+.proc-head{display:grid;grid-template-columns:100px 1fr;align-items:start;padding:44px 48px;gap:32px}
 .proc-num{font-family:var(--ft);font-size:72px;color:rgba(255,255,255,.06);line-height:1;letter-spacing:-.02em}
-.proc-body{}
 .proc-sub{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);margin-bottom:10px}
 .proc-title{font-family:var(--ft);font-size:32px;letter-spacing:.04em;text-transform:uppercase;color:var(--white);margin-bottom:16px}
 .proc-desc{font-size:14px;color:var(--muted);line-height:1.85;max-width:720px}
 .proc-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}
 .ptag{font-size:11px;color:var(--cyan);border:1px solid rgba(0,207,255,.25);padding:4px 13px;border-radius:20px;letter-spacing:.06em}
 
-/* ── ABOUT ──────────────────────────────────── */
+/* ABOUT */
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:start}
 .about-text p{font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:16px}
 .about-text strong{color:var(--white);font-weight:500}
 .about-btns{margin-top:32px;display:flex;gap:14px;flex-wrap:wrap}
-
-/* Skills panel */
 .skills-panel{}
 .skill-row{display:flex;align-items:center;justify-content:space-between;padding:13px 0;border-bottom:1px solid var(--brd)}
 .skill-row:first-child{border-top:1px solid var(--brd)}
@@ -167,8 +184,6 @@ body{background:var(--bg);color:var(--white);font-family:var(--fb);font-weight:3
 .tag:hover{border-color:var(--cyan);color:var(--white);background:rgba(0,207,255,.07)}
 .tag.ai{border-color:rgba(124,79,255,.3);color:#b49fff}
 .tag.ai:hover{border-color:var(--purple);background:rgba(124,79,255,.09)}
-
-/* Soft skills grid */
 .soft-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:44px}
 .softcard{padding:24px 22px;border:1px solid var(--brd);border-radius:10px;background:rgba(255,255,255,.018);transition:background .3s,border-color .3s}
 .softcard:hover{background:rgba(255,255,255,.03);border-color:var(--brdh)}
@@ -176,7 +191,16 @@ body{background:var(--bg);color:var(--white);font-family:var(--fb);font-weight:3
 .soft-title{font-size:13px;font-weight:600;color:var(--white);margin-bottom:6px;letter-spacing:.02em}
 .soft-desc{font-size:12px;color:var(--gray);line-height:1.6}
 
-/* ── CTA ─────────────────────────────────────── */
+/* LANGUAGES */
+.lang-grid{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+.lang-card{display:flex;align-items:center;gap:14px;padding:16px 24px;border:1px solid var(--brd);border-radius:10px;background:rgba(255,255,255,.018);transition:background .3s,border-color .3s;min-width:160px}
+.lang-card:hover{background:rgba(255,255,255,.035);border-color:var(--brdh)}
+.lang-flag{font-size:28px;line-height:1}
+.lang-info{}
+.lang-name{font-family:var(--ft);font-size:18px;letter-spacing:.08em;color:var(--white)}
+.lang-level{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);margin-top:2px}
+
+/* CTA */
 #contact{position:relative;z-index:10;padding:130px 60px;text-align:center;border-top:1px solid var(--brd);overflow:hidden}
 #contact::before{content:'';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:800px;height:450px;background:radial-gradient(ellipse,rgba(0,180,255,.08) 0%,rgba(124,79,255,.05) 45%,transparent 70%);pointer-events:none}
 .cta-t{font-family:var(--ft);font-size:clamp(48px,8vw,96px);letter-spacing:.03em;line-height:.95;text-transform:uppercase;color:var(--white);margin-bottom:24px}
@@ -186,7 +210,7 @@ body{background:var(--bg);color:var(--white);font-family:var(--fb);font-weight:3
 .btn-lnk{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border:1px solid var(--brd);padding:11px 22px;border-radius:30px;text-decoration:none;transition:all .2s}
 .btn-lnk:hover{color:var(--white);border-color:var(--brdh);background:rgba(0,207,255,.07)}
 
-/* ── MARQUEE (bottom) ────────────────────────── */
+/* MARQUEE */
 .mq{position:relative;z-index:10;padding:26px 0;border-top:1px solid var(--brd);overflow:hidden;background:rgba(3,3,14,.8);backdrop-filter:blur(10px)}
 .mq-inner{display:flex;gap:56px;align-items:center;width:max-content;animation:mqx 30s linear infinite}
 .mq:hover .mq-inner{animation-play-state:paused}
@@ -194,7 +218,7 @@ body{background:var(--bg);color:var(--white);font-family:var(--fb);font-weight:3
 .mi:hover{color:rgba(255,255,255,.4)}
 .md{width:4px;height:4px;border-radius:50%;background:var(--cyan);opacity:.3;flex-shrink:0}
 
-/* ── FOOTER ─────────────────────────────────── */
+/* FOOTER */
 footer{position:relative;z-index:10;border-top:1px solid var(--brd);padding:32px 60px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;background:rgba(3,3,14,.92)}
 .flogo{font-family:var(--ft);font-size:18px;letter-spacing:.14em;color:var(--white)}
 .fcopy{font-size:11px;color:var(--gray)}
@@ -202,20 +226,19 @@ footer{position:relative;z-index:10;border-top:1px solid var(--brd);padding:32px
 .fnav a{font-size:10px;font-weight:500;color:var(--gray);text-decoration:none;letter-spacing:.1em;text-transform:uppercase;transition:color .2s}
 .fnav a:hover{color:var(--white)}
 
-/* ── KEYFRAMES ──────────────────────────────── */
+/* KEYFRAMES */
 @keyframes fu{from{opacity:0;transform:translateY(36px)}to{opacity:1;transform:none}}
 @keyframes fi{from{opacity:0}to{opacity:1}}
 @keyframes mqx{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @keyframes pls{0%,100%{opacity:.3}50%{opacity:1}}
 
-/* ── RESPONSIVE ─────────────────────────────── */
+/* RESPONSIVE */
 @media(max-width:960px){
   #nav{padding:0 24px}
   .nmenu{display:none}
   #hero,.sec,#contact{padding-left:24px;padding-right:24px}
   .hh1{font-size:clamp(62px,14vw,100px)}
   .hrow{flex-direction:column;align-items:flex-start}
-  .hstats{gap:0}
   .about-grid{grid-template-columns:1fr;gap:52px}
   .svc-grid{grid-template-columns:1fr 1fr}
   .soft-grid{grid-template-columns:1fr 1fr}
@@ -224,6 +247,8 @@ footer{position:relative;z-index:10;border-top:1px solid var(--brd);padding:32px
   .vg2,.vg3,.vg12{grid-template-columns:1fr}
   footer{padding:26px 24px;flex-direction:column;text-align:center}
   .shint{display:none}
+  .vinfo{grid-template-columns:1fr}
+  .vinfo-col:first-child{border-right:none;border-bottom:1px solid var(--brd)}
 }
 </style>
 </head>
@@ -243,17 +268,18 @@ footer{position:relative;z-index:10;border-top:1px solid var(--brd);padding:32px
 </nav>
 
 <!-- HERO -->
-<section id="hero">
+<section id="hero" aria-label="Hero">
   <p class="htag">Shaping Motion</p>
   <h1 class="hh1">
-    Nicola<br/><span class="ac">Lorusso.</span>
+    Nicola<br/><span class="ac">Lorusso</span>
   </h1>
-  <p class="hrole">Visual Director &amp; Motion Specialist
-    <span class="hrole-sub">Post-Production &nbsp;&middot;&nbsp; Motion Graphics &nbsp;&middot;&nbsp; Live Event Media &nbsp;&middot;&nbsp; Where strategic storytelling meets advanced motion design.</span>
-  </p>
+  <div class="hrole-block">
+    <div class="hrole-title">Visual Director &amp; Motion Specialist</div>
+    <div class="hrole-sub">Post-Production &nbsp;&middot;&nbsp; Motion Graphics &nbsp;&middot;&nbsp; Live Event Media &nbsp;&middot;&nbsp; Where strategic storytelling meets advanced motion design</div>
+  </div>
   <div class="hrow">
     <p class="hdesc">
-      20+ years crafting high-end branded content, TV production and live event media across Italy and Europe. Available worldwide.
+      20+ years directing and shaping high-end branded content, TV production and live event media across Italy and Europe — available worldwide
     </p>
     <div class="hacts">
       <a href="#portfolio" class="btn btn-p">View Work</a>
@@ -261,199 +287,197 @@ footer{position:relative;z-index:10;border-top:1px solid var(--brd);padding:32px
     </div>
   </div>
   <div class="hstats">
-    <div class="hstat">
-      <div class="hstat-n">20<sub>+</sub></div>
-      <div class="hstat-l">Years on set & post</div>
-    </div>
-    <div class="hstat" style="padding-left:40px">
-      <div class="hstat-n">12<sub>+</sub></div>
-      <div class="hstat-l">TV networks</div>
-    </div>
-    <div class="hstat" style="padding-left:40px">
-      <div class="hstat-n">200<sub>+</sub></div>
-      <div class="hstat-l">Projects delivered</div>
-    </div>
-    <div class="hstat" style="padding-left:40px">
-      <div class="hstat-n">5k<sub>+</sub></div>
-      <div class="hstat-l">Hours edited</div>
-    </div>
+    <div class="hstat"><div class="hstat-n">20<sub>+</sub></div><div class="hstat-l">Years Directing &amp; Post</div></div>
+    <div class="hstat" style="padding-left:40px"><div class="hstat-n">12<sub>+</sub></div><div class="hstat-l">TV Networks</div></div>
+    <div class="hstat" style="padding-left:40px"><div class="hstat-n">200<sub>+</sub></div><div class="hstat-l">Projects Delivered</div></div>
+    <div class="hstat" style="padding-left:40px"><div class="hstat-n">5k<sub>+</sub></div><div class="hstat-l">Hours Edited</div></div>
   </div>
   <div class="shint"><div class="sline"></div><span>Scroll</span></div>
 </section>
 
 <!-- PORTFOLIO -->
-<section id="portfolio" class="sec">
+<section id="portfolio" class="sec" aria-label="Portfolio">
   <div class="sechead reveal">
     <div>
-      <div class="eye">Selected Work</div>
+      <div class="eye">Selected Works</div>
       <h2 class="stitle">Portfolio</h2>
     </div>
-    <a href="https://vimeo.com/niloarte" target="_blank" rel="noopener" class="btn btn-s">Full Profile &#8599;</a>
+    <a href="https://vimeo.com/niloarte" target="_blank" rel="noopener" class="btn btn-s" aria-label="View full Vimeo portfolio">Full Profile &#8599;</a>
   </div>
 
   <!-- Filter tabs -->
-  <div class="filter-tabs reveal">
-    <span class="ftab active" data-filter="all">All Work</span>
-    <span class="ftab" data-filter="branded">Branded Content</span>
-    <span class="ftab" data-filter="tv">TV &amp; ADV</span>
-    <span class="ftab" data-filter="animation">Animation &amp; Music</span>
-    <span class="ftab" data-filter="corporate">Corporate &amp; Web</span>
+  <div class="filter-tabs reveal" role="tablist">
+    <span class="ftab active" data-filter="all" role="tab" tabindex="0">All Works</span>
+    <span class="ftab" data-filter="branded" role="tab" tabindex="0">Branded Contents</span>
+    <span class="ftab" data-filter="tv" role="tab" tabindex="0">TV &amp; ADV</span>
+    <span class="ftab" data-filter="animation" role="tab" tabindex="0">Animation &amp; Music</span>
+    <span class="ftab" data-filter="corporate" role="tab" tabindex="0">Corporate &amp; Web</span>
   </div>
 
-  <!-- SHOWREEL — always visible, full width -->
+  <!-- SHOWREEL -->
   <div class="pitem reveal" data-cat="all">
     <div class="vfeat">
       <div class="r50">
-        <iframe src="https://player.vimeo.com/video/282321139?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://player.vimeo.com/video/282321139?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="NILO Showreel — Nicola Lorusso"></iframe>
+        <div class="vov"><div class="vov-badge"><span class="vov-label">Showreel</span><span class="vov-name">NILO — Nicola Lorusso</span></div></div>
       </div>
-      <div class="vlabel-feat">
-        <div>
-          <div class="vclient">NILO Showreel</div>
-          <div class="vrole">Video Direction &middot; Motion Design &middot; Post Production</div>
-        </div>
+      <div class="vinfo">
+        <div class="vinfo-col"><div class="vinfo-key">Client</div><div class="vinfo-val">NILO Studio</div></div>
+        <div class="vinfo-col"><div class="vinfo-key">My Roles</div><div class="vinfo-roles">Video Direction &middot; Motion Design &middot; Post Production</div></div>
       </div>
     </div>
   </div>
 
-  <!-- BRANDED CONTENT row 1 -->
+  <!-- BRANDED CONTENTS row 1: VELUX + PANDORA -->
   <div class="vg2 pitem reveal" data-cat="branded">
     <div class="vcell">
       <div class="r169">
-        <iframe src="https://player.vimeo.com/video/287654251?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://player.vimeo.com/video/287654251?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="VELUX — Branded Content"></iframe>
+        <div class="vov"><div class="vov-badge"><span class="vov-label">Branded Content</span><span class="vov-name">VELUX</span></div></div>
       </div>
-      <div class="vlabel">
-        <div class="vclient">Branded Content</div>
-        <div class="vrole">Production &middot; Editing &middot; Post Production</div>
+      <div class="vinfo">
+        <div class="vinfo-col"><div class="vinfo-key">Client</div><div class="vinfo-val">VELUX</div></div>
+        <div class="vinfo-col"><div class="vinfo-key">My Roles</div><div class="vinfo-roles">Production &middot; Editing &middot; Post Production</div></div>
       </div>
     </div>
     <div class="vcell">
       <div class="r169">
-        <iframe src="https://player.vimeo.com/video/296874363?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://player.vimeo.com/video/296874363?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="PANDORA — Branded Content"></iframe>
+        <div class="vov"><div class="vov-badge"><span class="vov-label">Branded Content</span><span class="vov-name">PANDORA</span></div></div>
       </div>
-      <div class="vlabel">
-        <div class="vclient">Branded Content</div>
-        <div class="vrole">Production &middot; Editing &middot; Post Production</div>
+      <div class="vinfo">
+        <div class="vinfo-col"><div class="vinfo-key">Client</div><div class="vinfo-val">PANDORA</div></div>
+        <div class="vinfo-col"><div class="vinfo-key">My Roles</div><div class="vinfo-roles">Production &middot; Editing &middot; Post Production</div></div>
       </div>
     </div>
   </div>
 
-  <!-- BRANDED CONTENT row 2 (3 col) -->
+  <!-- BRANDED CONTENTS row 2: CORRIERE + PERUGINA + TAKEDA -->
   <div class="vg3 pitem reveal" data-cat="branded">
     <div class="vcell">
       <div class="r169">
-        <iframe src="https://player.vimeo.com/video/318399389?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://player.vimeo.com/video/318399389?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Corriere della Sera — Digital Edition"></iframe>
+        <div class="vov"><div class="vov-badge"><span class="vov-label">Branded Content</span><span class="vov-name">CORRIERE DELLA SERA</span></div></div>
       </div>
-      <div class="vlabel">
-        <div class="vclient">Branded Content</div>
-        <div class="vrole">Editing &middot; Post Production</div>
-      </div>
-    </div>
-    <div class="vcell">
-      <div class="r169">
-        <iframe src="https://player.vimeo.com/video/318401942?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="vlabel">
-        <div class="vclient">Branded Content</div>
-        <div class="vrole">Production &middot; Co-Director &middot; Post Production</div>
+      <div class="vinfo">
+        <div class="vinfo-col"><div class="vinfo-key">Client</div><div class="vinfo-val">Corriere della Sera — Digital Edition</div></div>
+        <div class="vinfo-col"><div class="vinfo-key">My Roles</div><div class="vinfo-roles">Editing &middot; Post Production</div></div>
       </div>
     </div>
     <div class="vcell">
       <div class="r169">
-        <iframe src="https://player.vimeo.com/video/318399899?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://player.vimeo.com/video/318401942?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="PERUGINA — Branded Content"></iframe>
+        <div class="vov"><div class="vov-badge"><span class="vov-label">Branded Content</span><span class="vov-name">PERUGINA</span></div></div>
       </div>
-      <div class="vlabel">
-        <div class="vclient">Branded Content</div>
-        <div class="vrole">Production &middot; Co-Director &middot; Post Production</div>
+      <div class="vinfo">
+        <div class="vinfo-col"><div class="vinfo-key">Client</div><div class="vinfo-val">PERUGINA</div></div>
+        <div class="vinfo-col"><div class="vinfo-key">My Roles</div><div class="vinfo-roles">Production &middot; Co-Director &middot; Post Production</div></div>
+      </div>
+    </div>
+    <div class="vcell">
+      <div class="r169">
+        <iframe src="https://player.vimeo.com/video/318399899?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="TAKEDA — Branded Content"></iframe>
+        <div class="vov"><div class="vov-badge"><span class="vov-label">Branded Content</span><span class="vov-name">TAKEDA</span></div></div>
+      </div>
+      <div class="vinfo">
+        <div class="vinfo-col"><div class="vinfo-key">Client</div><div class="vinfo-val">TAKEDA</div></div>
+        <div class="vinfo-col"><div class="vinfo-key">My Roles</div><div class="vinfo-roles">Production &middot; Co-Director &middot; Post Production</div></div>
       </div>
     </div>
   </div>
 
-  <!-- TV SHOWS — featured + side -->
+  <!-- TV & ADV: DEA KIDS + PARAMOUNT -->
   <div class="vg12 pitem reveal" data-cat="tv" style="margin-top:16px">
     <div class="vcell">
       <div class="r169">
-        <iframe src="https://player.vimeo.com/video/287652564?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://player.vimeo.com/video/287652564?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="DeA Kids — TV Show"></iframe>
+        <div class="vov"><div class="vov-badge"><span class="vov-label">TV Show</span><span class="vov-name">DEA KIDS</span></div></div>
       </div>
-      <div class="vlabel">
-        <div class="vclient">TV Show</div>
-        <div class="vrole">Production &middot; Director &middot; Post Production</div>
+      <div class="vinfo">
+        <div class="vinfo-col"><div class="vinfo-key">Client</div><div class="vinfo-val">DeA Kids</div></div>
+        <div class="vinfo-col"><div class="vinfo-key">My Roles</div><div class="vinfo-roles">Production &middot; Director &middot; Post Production</div></div>
       </div>
     </div>
     <div class="vcell">
       <div class="r169">
-        <iframe src="https://player.vimeo.com/video/287653330?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://player.vimeo.com/video/287653330?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Paramount Channel — TV Show"></iframe>
+        <div class="vov"><div class="vov-badge"><span class="vov-label">TV Show</span><span class="vov-name">PARAMOUNT CHANNEL</span></div></div>
       </div>
-      <div class="vlabel">
-        <div class="vclient">TV Show</div>
-        <div class="vrole">Editing &middot; Post Production</div>
+      <div class="vinfo">
+        <div class="vinfo-col"><div class="vinfo-key">Client</div><div class="vinfo-val">Paramount Channel</div></div>
+        <div class="vinfo-col"><div class="vinfo-key">My Roles</div><div class="vinfo-roles">Editing &middot; Post Production</div></div>
       </div>
     </div>
   </div>
 
-  <!-- TV ADV 3 col -->
+  <!-- TV ADV: FINI + VALLESPLUGA + ITALPIZZA -->
   <div class="vg3 pitem reveal" data-cat="tv" style="margin-top:16px">
     <div class="vcell">
       <div class="r169">
-        <iframe src="https://player.vimeo.com/video/318400534?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://player.vimeo.com/video/318400534?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="FINI — TV ADV"></iframe>
+        <div class="vov"><div class="vov-badge"><span class="vov-label">TV &middot; ADV</span><span class="vov-name">FINI</span></div></div>
       </div>
-      <div class="vlabel">
-        <div class="vclient">TV &middot; ADV</div>
-        <div class="vrole">Editing &middot; Post Production</div>
-      </div>
-    </div>
-    <div class="vcell">
-      <div class="r169">
-        <iframe src="https://player.vimeo.com/video/318398564?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="vlabel">
-        <div class="vclient">TV &middot; ADV</div>
-        <div class="vrole">Editing &middot; Post Production</div>
+      <div class="vinfo">
+        <div class="vinfo-col"><div class="vinfo-key">Client</div><div class="vinfo-val">FINI</div></div>
+        <div class="vinfo-col"><div class="vinfo-key">My Roles</div><div class="vinfo-roles">Editing &middot; Post Production</div></div>
       </div>
     </div>
     <div class="vcell">
       <div class="r169">
-        <iframe src="https://player.vimeo.com/video/318404805?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://player.vimeo.com/video/318398564?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="VALLESPLUGA — TV ADV"></iframe>
+        <div class="vov"><div class="vov-badge"><span class="vov-label">TV &middot; ADV</span><span class="vov-name">VALLESPLUGA</span></div></div>
       </div>
-      <div class="vlabel">
-        <div class="vclient">TV &middot; ADV</div>
-        <div class="vrole">Editing &middot; Post Production</div>
+      <div class="vinfo">
+        <div class="vinfo-col"><div class="vinfo-key">Client</div><div class="vinfo-val">VALLESPLUGA</div></div>
+        <div class="vinfo-col"><div class="vinfo-key">My Roles</div><div class="vinfo-roles">Editing &middot; Post Production</div></div>
+      </div>
+    </div>
+    <div class="vcell">
+      <div class="r169">
+        <iframe src="https://player.vimeo.com/video/318404805?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="ITALPIZZA — TV ADV"></iframe>
+        <div class="vov"><div class="vov-badge"><span class="vov-label">TV &middot; ADV</span><span class="vov-name">ITALPIZZA</span></div></div>
+      </div>
+      <div class="vinfo">
+        <div class="vinfo-col"><div class="vinfo-key">Client</div><div class="vinfo-val">ITALPIZZA</div></div>
+        <div class="vinfo-col"><div class="vinfo-key">My Roles</div><div class="vinfo-roles">Editing &middot; Post Production</div></div>
       </div>
     </div>
   </div>
 
-  <!-- ANIMATION & MUSIC -->
+  <!-- ANIMATION & MUSIC: TheSoul Publishing -->
   <div class="pitem reveal" data-cat="animation" style="margin-top:16px">
     <div class="vfeat">
       <div class="r169">
-        <iframe src="https://player.vimeo.com/video/397459930?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://player.vimeo.com/video/397459930?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Teen Voices — TheSoul Publishing"></iframe>
+        <div class="vov"><div class="vov-badge"><span class="vov-label">Animation &amp; Music</span><span class="vov-name">TEEN VOICES &mdash; THESOUL PUBLISHING</span></div></div>
       </div>
-      <div class="vlabel-feat">
-        <div>
-          <div class="vclient">Animation &amp; Music Video</div>
-          <div class="vrole">Cartoon 2D Style &middot; Direction &middot; Animation &middot; Post Production</div>
-        </div>
+      <div class="vinfo">
+        <div class="vinfo-col"><div class="vinfo-key">Client</div><div class="vinfo-val">Teen Voices &mdash; TheSoul Publishing</div></div>
+        <div class="vinfo-col"><div class="vinfo-key">My Roles</div><div class="vinfo-roles">Cartoon 2D Style &middot; Direction &middot; Animation &middot; Post Production</div></div>
       </div>
     </div>
   </div>
 
-  <!-- CORPORATE & WEB 2 col -->
+  <!-- CORPORATE & WEB: LOACKER + POSTE ITALIANE -->
   <div class="vg2 pitem reveal" data-cat="corporate" style="margin-top:16px">
     <div class="vcell">
       <div class="r169">
-        <iframe src="https://player.vimeo.com/video/311487994?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://player.vimeo.com/video/311487994?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="LOACKER — Corporate &amp; Web"></iframe>
+        <div class="vov"><div class="vov-badge"><span class="vov-label">Corporate &amp; Web</span><span class="vov-name">LOACKER</span></div></div>
       </div>
-      <div class="vlabel">
-        <div class="vclient">Video Ricette Magiche</div>
-        <div class="vrole">Production &middot; Motion Graphics &middot; Post Production</div>
+      <div class="vinfo">
+        <div class="vinfo-col"><div class="vinfo-key">Client</div><div class="vinfo-val">LOACKER</div></div>
+        <div class="vinfo-col"><div class="vinfo-key">My Roles</div><div class="vinfo-roles">Production &middot; Motion Graphics &middot; Post Production</div></div>
       </div>
     </div>
     <div class="vcell">
       <div class="r169">
-        <iframe src="https://player.vimeo.com/video/318402806?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://player.vimeo.com/video/318402806?color=00cfff&title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="POSTE ITALIANE — Corporate &amp; Web"></iframe>
+        <div class="vov"><div class="vov-badge"><span class="vov-label">Corporate &amp; Web</span><span class="vov-name">POSTE ITALIANE</span></div></div>
       </div>
-      <div class="vlabel">
-        <div class="vclient">Corporate Production</div>
-        <div class="vrole">Production &middot; Co-Director &middot; GFX &middot; Post Production</div>
+      <div class="vinfo">
+        <div class="vinfo-col"><div class="vinfo-key">Client</div><div class="vinfo-val">POSTE ITALIANE</div></div>
+        <div class="vinfo-col"><div class="vinfo-key">My Roles</div><div class="vinfo-roles">Production &middot; Co-Director &middot; GFX &middot; Post Production</div></div>
       </div>
     </div>
   </div>
@@ -461,120 +485,163 @@ footer{position:relative;z-index:10;border-top:1px solid var(--brd);padding:32px
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="sec">
+<section id="services" class="sec" aria-label="Services">
   <div class="reveal">
     <div class="eye">What I Deliver</div>
     <h2 class="stitle">Services</h2>
   </div>
   <div class="svc-grid">
+
+    <!-- 01 VIDEO DIRECTION -->
     <div class="scard reveal">
+      <div class="scard-bg" aria-hidden="true">
+        <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="100" r="70" stroke="var(--cyan)" stroke-width="1"/>
+          <circle cx="100" cy="100" r="50" stroke="var(--cyan)" stroke-width="0.5" stroke-dasharray="4 4"/>
+          <circle cx="100" cy="100" r="10" fill="var(--cyan)" opacity="0.5"/>
+          <line x1="100" y1="30" x2="100" y2="170" stroke="var(--cyan)" stroke-width="0.5"/>
+          <line x1="30" y1="100" x2="170" y2="100" stroke="var(--cyan)" stroke-width="0.5"/>
+          <polygon points="84,76 84,124 132,100" fill="var(--cyan)" opacity="0.3"/>
+          <rect x="60" y="56" width="80" height="88" rx="6" stroke="var(--blue)" stroke-width="1" fill="none"/>
+        </svg>
+      </div>
       <span class="snum">01</span>
       <div class="sbar"></div>
       <div class="sname">Video Direction</div>
-      <div class="sdesc">Full creative direction for branded films, corporate campaigns, TV formats and digital content — from concept to final delivery.</div>
+      <div class="sdesc">Full creative direction for branded films, corporate campaigns, TV formats and digital content — from concept to final delivery</div>
     </div>
+
+    <!-- 02 POST-PRODUCTION -->
     <div class="scard reveal">
+      <div class="scard-bg" aria-hidden="true">
+        <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="20" y="90" width="160" height="20" rx="3" stroke="var(--cyan)" stroke-width="0.5"/>
+          <rect x="20" y="60" width="160" height="20" rx="3" stroke="var(--blue)" stroke-width="0.5"/>
+          <rect x="20" y="120" width="160" height="20" rx="3" stroke="var(--purple)" stroke-width="0.5"/>
+          <rect x="30" y="93" width="40" height="14" rx="2" fill="var(--cyan)" opacity="0.4"/>
+          <rect x="80" y="63" width="60" height="14" rx="2" fill="var(--blue)" opacity="0.4"/>
+          <rect x="50" y="123" width="80" height="14" rx="2" fill="var(--purple)" opacity="0.4"/>
+          <line x1="100" y1="20" x2="100" y2="180" stroke="var(--cyan)" stroke-width="0.5" stroke-dasharray="3 3"/>
+          <circle cx="100" cy="100" r="4" fill="var(--cyan)"/>
+          <circle cx="100" cy="70" r="4" fill="var(--blue)"/>
+          <circle cx="100" cy="130" r="4" fill="var(--purple)"/>
+        </svg>
+      </div>
       <span class="snum">02</span>
       <div class="sbar"></div>
       <div class="sname">Post-Production</div>
-      <div class="sdesc">Video editing, color grading, sound design supervision and VFX compositing. Flawless delivery on every format and deadline.</div>
+      <div class="sdesc">Video editing, color grading, sound design supervision and VFX compositing — flawless delivery on every format and deadline</div>
     </div>
+
+    <!-- 03 MOTION DESIGN & GFX -->
     <div class="scard reveal">
+      <div class="scard-bg" aria-hidden="true">
+        <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="100,30 140,90 100,70 60,90" fill="var(--cyan)" opacity="0.25"/>
+          <polygon points="100,170 140,110 100,130 60,110" fill="var(--purple)" opacity="0.25"/>
+          <polygon points="30,100 90,60 70,100 90,140" fill="var(--blue)" opacity="0.2"/>
+          <polygon points="170,100 110,60 130,100 110,140" fill="var(--teal)" opacity="0.2"/>
+          <circle cx="100" cy="100" r="20" stroke="var(--cyan)" stroke-width="1" fill="none"/>
+          <circle cx="100" cy="100" r="5" fill="var(--cyan)" opacity="0.8"/>
+          <line x1="100" y1="80" x2="100" y2="30" stroke="var(--cyan)" stroke-width="0.5"/>
+          <line x1="100" y1="120" x2="100" y2="170" stroke="var(--purple)" stroke-width="0.5"/>
+          <line x1="80" y1="100" x2="30" y2="100" stroke="var(--blue)" stroke-width="0.5"/>
+          <line x1="120" y1="100" x2="170" y2="100" stroke="var(--teal)" stroke-width="0.5"/>
+        </svg>
+      </div>
       <span class="snum">03</span>
       <div class="sbar"></div>
       <div class="sname">Motion Design &amp; GFX</div>
-      <div class="sdesc">2D/3D animation, kinetic typography, logo animation and motion graphics — crafted in After Effects with AI-assisted workflows.</div>
+      <div class="sdesc">2D/3D animation, kinetic typography, logo animation and motion graphics — crafted in After Effects with AI-assisted workflows</div>
     </div>
+
+    <!-- 04 MULTI-PLATFORM OUTPUT -->
     <div class="scard reveal">
+      <div class="scard-bg" aria-hidden="true">
+        <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="30" y="50" width="140" height="90" rx="6" stroke="var(--cyan)" stroke-width="1" fill="none"/>
+          <rect x="85" y="140" width="30" height="15" stroke="var(--cyan)" stroke-width="0.5" fill="none"/>
+          <rect x="70" y="155" width="60" height="4" rx="2" stroke="var(--cyan)" stroke-width="0.5" fill="none"/>
+          <rect x="50" y="65" width="45" height="60" rx="3" stroke="var(--blue)" stroke-width="0.5" fill="var(--blue)" fill-opacity="0.08"/>
+          <rect x="105" y="72" width="30" height="46" rx="3" stroke="var(--purple)" stroke-width="0.5" fill="var(--purple)" fill-opacity="0.08"/>
+          <rect x="143" y="78" width="18" height="34" rx="2" stroke="var(--teal)" stroke-width="0.5" fill="var(--teal)" fill-opacity="0.08"/>
+          <text x="72" y="99" font-size="8" fill="var(--blue)" opacity="0.6" text-anchor="middle" font-family="monospace">16:9</text>
+          <text x="120" y="99" font-size="6" fill="var(--purple)" opacity="0.6" text-anchor="middle" font-family="monospace">1:1</text>
+          <text x="152" y="99" font-size="5" fill="var(--teal)" opacity="0.6" text-anchor="middle" font-family="monospace">9:16</text>
+        </svg>
+      </div>
       <span class="snum">04</span>
       <div class="sbar"></div>
       <div class="sname">Multi-Platform Output</div>
-      <div class="sdesc">Cross-platform optimisation for broadcast, social (9:16, 1:1), digital signage and live events. Every codec, every screen.</div>
+      <div class="sdesc">Cross-platform optimisation for broadcast, social (9:16, 1:1), digital signage and live events — every codec, every screen</div>
     </div>
+
   </div>
 </section>
 
 <!-- PROCESS -->
-<section id="process" class="sec">
+<section id="process" class="sec" aria-label="Creative Process">
   <div class="reveal">
     <div class="eye">How I Work</div>
     <h2 class="stitle">The Creative Process</h2>
   </div>
   <div class="proc-list">
-    <div class="proc-item reveal">
+    <article class="proc-item reveal">
       <div class="proc-head">
         <div class="proc-num">01</div>
         <div class="proc-body">
           <div class="proc-sub">Strategy</div>
           <div class="proc-title">Concept Development &amp; Creative Direction</div>
-          <div class="proc-desc">Understanding your brand identity, audience, and core objectives is the foundation of every project. I translate goals into a cohesive Video Strategy through rigorous Concept Development, detailed Moodboarding, and Storyboarding. Whether it's a high-stakes corporate campaign or a brand film, I provide the Creative Direction needed to ensure every frame serves a purpose. By aligning vision with execution during pre-production, I build the roadmap for a narrative that resonates and performs.</div>
+          <p class="proc-desc">Understanding your brand identity, audience, and core objectives is the foundation of every project. I translate goals into a cohesive Video Strategy through rigorous Concept Development, detailed Moodboarding, and Storyboarding. Whether it's a high-stakes corporate campaign or a brand film, I provide the Creative Direction needed to ensure every frame serves a purpose. By aligning vision with execution during pre-production, I build the roadmap for a narrative that resonates and performs</p>
           <div class="proc-tags">
-            <span class="ptag">Concept Development</span>
-            <span class="ptag">Moodboarding</span>
-            <span class="ptag">Storyboarding</span>
-            <span class="ptag">Creative Direction</span>
-            <span class="ptag">Video Strategy</span>
-            <span class="ptag">Pre-Production</span>
+            <span class="ptag">Concept Development</span><span class="ptag">Moodboarding</span><span class="ptag">Storyboarding</span><span class="ptag">Creative Direction</span><span class="ptag">Video Strategy</span><span class="ptag">Pre-Production</span>
           </div>
         </div>
       </div>
-    </div>
-    <div class="proc-item reveal">
+    </article>
+    <article class="proc-item reveal">
       <div class="proc-head">
         <div class="proc-num">02</div>
         <div class="proc-body">
           <div class="proc-sub">Creation</div>
           <div class="proc-title">High-End Post-Production &amp; Motion Design</div>
-          <div class="proc-desc">This is where vision meets technical excellence. I deliver full-spectrum Post-Production services, blending rhythmic Video Editing with cinematic Color Grading. As a Motion Graphic Designer, I enhance storytelling through 2D/3D Animation, VFX Compositing, and Kinetic Typography. My process leverages AI-assisted workflows to streamline heavy tasks, ensuring rapid turnaround times and uncompromising quality. From the first Rough Cut to the final polish, I craft immersive visual experiences that capture and hold attention.</div>
+          <p class="proc-desc">This is where vision meets technical excellence. I deliver full-spectrum Post-Production services, blending rhythmic Video Editing with cinematic Color Grading. As a Motion Graphic Designer, I enhance storytelling through 2D/3D Animation, VFX Compositing, and Kinetic Typography. My process leverages AI-assisted workflows to streamline heavy tasks, ensuring rapid turnaround times and uncompromising quality. From the first Rough Cut to the final polish, I craft immersive visual experiences that capture and hold attention</p>
           <div class="proc-tags">
-            <span class="ptag">Video Editing</span>
-            <span class="ptag">Color Grading</span>
-            <span class="ptag">Motion Graphics</span>
-            <span class="ptag">2D/3D Animation</span>
-            <span class="ptag">VFX Compositing</span>
-            <span class="ptag">Kinetic Typography</span>
-            <span class="ptag">AI-Assisted Workflows</span>
+            <span class="ptag">Video Editing</span><span class="ptag">Color Grading</span><span class="ptag">Motion Graphics</span><span class="ptag">2D/3D Animation</span><span class="ptag">VFX Compositing</span><span class="ptag">Kinetic Typography</span><span class="ptag">AI-Assisted Workflows</span>
           </div>
         </div>
       </div>
-    </div>
-    <div class="proc-item reveal">
+    </article>
+    <article class="proc-item reveal">
       <div class="proc-head">
         <div class="proc-num">03</div>
         <div class="proc-body">
           <div class="proc-sub">Distribution</div>
           <div class="proc-title">Large-Format Delivery &amp; Multi-Platform Optimisation</div>
-          <div class="proc-desc">A great story deserves a flawless technical execution, regardless of the screen size. I specialise in Large-Format Video Content tailored for Live Events, Immersive Displays, and Corporate Video Conferences, ensuring pixel-perfect clarity on massive scales. Beyond the stage, I handle Cross-Platform Optimisation for Social Media (9:16, 1:1), Digital Signage, and Broadcast. Every output is meticulously rendered with the correct Codecs (ProRes, H.264) and Aspect Ratios, ensuring your content remains impactful from a smartphone to a stadium LED wall.</div>
+          <p class="proc-desc">A great story deserves a flawless technical execution, regardless of the screen size. I specialise in Large-Format Video Content tailored for Live Events, Immersive Displays, and Corporate Video Conferences, ensuring pixel-perfect clarity on massive scales. Beyond the stage, I handle Cross-Platform Optimisation for Social Media (9:16, 1:1), Digital Signage, and Broadcast. Every output is meticulously rendered with the correct Codecs (ProRes, H.264) and Aspect Ratios, ensuring your content remains impactful from a smartphone to a stadium LED wall</p>
           <div class="proc-tags">
-            <span class="ptag">Large-Format Video</span>
-            <span class="ptag">Live Events</span>
-            <span class="ptag">Digital Signage</span>
-            <span class="ptag">Social Media Formats</span>
-            <span class="ptag">ProRes / H.264</span>
-            <span class="ptag">Broadcast Delivery</span>
-            <span class="ptag">Multi-Platform</span>
+            <span class="ptag">Large-Format Video</span><span class="ptag">Live Events</span><span class="ptag">Digital Signage</span><span class="ptag">Social Media Formats</span><span class="ptag">ProRes / H.264</span><span class="ptag">Broadcast Delivery</span><span class="ptag">Multi-Platform</span>
           </div>
         </div>
       </div>
-    </div>
+    </article>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="sec">
+<section id="about" class="sec" aria-label="About Nicola Lorusso">
   <div class="about-grid">
     <div class="about-text reveal">
       <div class="eye">About</div>
       <h2 class="stitle" style="margin-bottom:28px">Nicola Lorusso</h2>
-      <p><strong>Senior Video Director and Motion Designer</strong> with 20+ years of experience across TV broadcasting, branded content, corporate production and digital media. Based in Milan, available for projects worldwide.</p>
-      <p>Expert in <strong>Video Direction, Post-Production, Motion Graphics and VFX Compositing</strong> — with a strong focus on innovative AI-assisted workflows. Proven track record managing complex productions end-to-end, independently or leading creative teams for broadcasters, brands and agencies.</p>
-      <p>Collaborations include MTV, Nickelodeon, Paramount Channel, RAI, Mediaset, Viacom, Comedy Central, DeA Kids and a range of production companies and digital agencies across Italy and Europe.</p>
+      <p><strong>Visual Director and Motion Specialist</strong> with 20+ years of experience directing and shaping visual stories across TV broadcasting, branded content, corporate production and digital media — based in Milan, available for projects worldwide</p>
+      <p>Expert in <strong>Video Direction, Post-Production, Motion Graphics and VFX Compositing</strong> — with a strong focus on innovative AI-assisted workflows. Proven track record managing complex productions end-to-end, independently or leading creative teams for broadcasters, brands and agencies across Italy and Europe</p>
+      <p>Collaborations include MTV, Nickelodeon, Paramount Channel, RAI, Mediaset, Viacom, Comedy Central, DeA Kids and a range of production companies and digital agencies</p>
       <div class="about-btns">
         <a href="https://vimeo.com/niloarte" target="_blank" rel="noopener" class="btn btn-p">Vimeo Portfolio</a>
-        <a href="/cdn-cgi/l/email-protection#86e8efeae9e7f4f2e3c6eee9f2ebe7efeaa8e5e9eb" class="btn btn-s"><span class="__cf_email__" data-cfemail="127c7b7e7d73606677527a7d667f737b7e3c717d7f">[email&#160;protected]</span></a>
+        <a href="/cdn-cgi/l/email-protection#432d2a2f2c22313726032b2c372e222a2f6d202c2e" class="btn btn-s"><span class="__cf_email__" data-cfemail="9af4f3f6f5fbe8eeffdaf2f5eef7fbf3f6b4f9f5f7">[email&#160;protected]</span></a>
       </div>
     </div>
-
     <div class="skills-panel reveal">
       <div class="eye" style="margin-bottom:24px">Tools &amp; Expertise</div>
       <div class="skill-row"><span class="sk-name">After Effects (Advanced)</span><div class="sk-track"><div class="sk-fill" data-w="0.97"></div></div></div>
@@ -592,179 +659,106 @@ footer{position:relative;z-index:10;border-top:1px solid var(--brd);padding:32px
     </div>
   </div>
 
-  <!-- Soft skills -->
+  <!-- Soft Skills -->
   <div class="reveal" style="margin-top:72px">
-    <div class="eye">Professional Profile</div>
-    <h3 class="stitle" style="font-size:clamp(26px,3vw,42px);margin-bottom:32px">Beyond the Technical</h3>
+    <div class="eye">Skills &amp; Approach</div>
+    <h3 class="stitle" style="font-size:clamp(26px,3vw,42px);margin-bottom:32px">Directing &mdash; Designing &mdash; Delivering</h3>
   </div>
   <div class="soft-grid reveal">
-    <div class="softcard">
-      <div class="soft-icon">&#127916;</div>
-      <div class="soft-title">Creative Storytelling</div>
-      <div class="soft-desc">Exceptional ability to translate abstract briefs into compelling visual narratives that connect with audiences and drive brand recall.</div>
-    </div>
-    <div class="softcard">
-      <div class="soft-icon">&#9201;</div>
-      <div class="soft-title">Deadline-Driven Execution</div>
-      <div class="soft-desc">Proven ability to deliver broadcast-quality work on tight deadlines in fast-paced, high-pressure broadcast and agency environments.</div>
-    </div>
-    <div class="softcard">
-      <div class="soft-icon">&#129309;</div>
-      <div class="soft-title">Client Communication</div>
-      <div class="soft-desc">Clear, structured communication with clients and stakeholders at every production stage — from brief to final delivery sign-off.</div>
-    </div>
-    <div class="softcard">
-      <div class="soft-icon">&#127757;</div>
-      <div class="soft-title">Cross-Cultural Collaboration</div>
-      <div class="soft-desc">Experienced working with international agencies, brands and crews across Italy and Europe in Italian, English and Spanish.</div>
-    </div>
-    <div class="softcard">
-      <div class="soft-icon">&#128161;</div>
-      <div class="soft-title">Creative Problem-Solving</div>
-      <div class="soft-desc">Resourceful in finding elegant visual solutions within budget and technical constraints — turning limitations into creative opportunities.</div>
-    </div>
-    <div class="softcard">
-      <div class="soft-icon">&#129504;</div>
-      <div class="soft-title">AI-Forward Mindset</div>
-      <div class="soft-desc">Continuous adoption of emerging AI tools for pre-visualisation, asset generation and workflow automation to maximise output quality and efficiency.</div>
-    </div>
-  </div>
-  <!-- Languages -->
-  <div class="reveal" style="margin-top:72px">
-    <div class="eye">Languages</div>
-    <h3 class="stitle" style="font-size:clamp(24px,2.8vw,38px);margin-bottom:28px">Lingue Parlate</h3>
-    <div class="lang-grid">
-      <div class="lang-card"><span class="lang-name">Italiano</span><span class="lang-level">Native</span></div>
-      <div class="lang-card"><span class="lang-name">English</span><span class="lang-level">B1</span></div>
-      <div class="lang-card"><span class="lang-name">Español</span><span class="lang-level">B2</span></div>
-    </div>
+    <div class="softcard"><div class="soft-icon">&#127916;</div><div class="soft-title">Creative Storytelling</div><div class="soft-desc">Translating abstract briefs into compelling visual narratives that connect with audiences and drive measurable brand recall</div></div>
+    <div class="softcard"><div class="soft-icon">&#9201;</div><div class="soft-title">Deadline-Driven Execution</div><div class="soft-desc">Delivering broadcast-quality work on tight deadlines in fast-paced, high-pressure broadcast and agency environments</div></div>
+    <div class="softcard"><div class="soft-icon">&#129309;</div><div class="soft-title">Client Communication</div><div class="soft-desc">Clear, structured communication with clients and stakeholders at every production stage — from brief to final delivery sign-off</div></div>
+    <div class="softcard"><div class="soft-icon">&#127757;</div><div class="soft-title">Cross-Cultural Collaboration</div><div class="soft-desc">Experienced working with international agencies, brands and crews across Italy and Europe in three languages</div></div>
+    <div class="softcard"><div class="soft-icon">&#128161;</div><div class="soft-title">Creative Problem-Solving</div><div class="soft-desc">Finding elegant visual solutions within budget and technical constraints — turning limitations into creative opportunities</div></div>
+    <div class="softcard"><div class="soft-icon">&#129504;</div><div class="soft-title">AI-Forward Mindset</div><div class="soft-desc">Continuous adoption of emerging AI tools for pre-visualisation, asset generation and workflow automation</div></div>
   </div>
 
+  <!-- Languages -->
+  <div class="reveal" style="margin-top:64px">
+    <div class="eye">Languages</div>
+    <div class="lang-grid">
+      <div class="lang-card"><span class="lang-flag">&#127470;&#127481;</span><div class="lang-info"><div class="lang-name">Italian</div><div class="lang-level">Native</div></div></div>
+      <div class="lang-card"><span class="lang-flag">&#127468;&#127463;</span><div class="lang-info"><div class="lang-name">English</div><div class="lang-level">B1</div></div></div>
+      <div class="lang-card"><span class="lang-flag">&#127466;&#127480;</span><div class="lang-info"><div class="lang-name">Spanish</div><div class="lang-level">B2</div></div></div>
+    </div>
+  </div>
 </section>
 
 <!-- CTA -->
-<section id="contact">
+<section id="contact" aria-label="Contact">
   <div class="reveal">
     <div class="eye" style="justify-content:center">Start a Project</div>
     <h2 class="cta-t">
-      Let's Create<br/>Something That<br/><span class="ac">Moves.</span>
+      Creating<br/>Stories That<br/><span class="ac">Move</span>
     </h2>
-    <p class="cta-sub">Available for branded content, TV production, corporate video, motion design and post-production projects worldwide.</p>
+    <p class="cta-sub">Available for branded content, TV production, corporate video, motion design and post-production projects worldwide</p>
     <div class="cta-btns">
-      <a href="/cdn-cgi/l/email-protection#a6c8cfcac9c7d4d2c3e6cec9d2cbc7cfca88c5c9cb" class="btn btn-p"><span class="__cf_email__" data-cfemail="b0ded9dcdfd1c2c4d5f0d8dfc4ddd1d9dc9ed3dfdd">[email&#160;protected]</span></a>
+      <a href="/cdn-cgi/l/email-protection#82ecebeeede3f0f6e7c2eaedf6efe3ebeeace1edef" class="btn btn-p"><span class="__cf_email__" data-cfemail="630d0a0f0c02111706230b0c170e020a0f4d000c0e">[email&#160;protected]</span></a>
       <a href="tel:+393384354240" class="btn-lnk">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.73a16 16 0 006.29 6.29l1.1-1.1a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.73a16 16 0 006.29 6.29l1.1-1.1a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
         +39 338 435 4240
       </a>
       <a href="https://vimeo.com/niloarte" target="_blank" rel="noopener" class="btn-lnk">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M23.977 6.416c-.105 2.338-1.739 5.543-4.894 9.609-3.268 4.247-6.026 6.37-8.29 6.37-1.409 0-2.578-1.294-3.553-3.881L5.322 12.5C4.603 9.913 3.83 8.619 3 8.619c-.203 0-.906.427-2.109 1.282L0 8.71c1.329-1.17 2.639-2.339 3.917-3.517C5.579 3.705 6.851 2.913 7.697 2.83c2.012-.19 3.244 1.18 3.699 4.113.495 3.157.838 5.121 1.027 5.891.57 2.578 1.194 3.868 1.876 3.868.532 0 1.337-.842 2.413-2.525 1.079-1.682 1.658-2.966 1.73-3.852.145-1.458-.42-2.193-1.73-2.193-.615 0-1.248.141-1.896.435 1.26-4.127 3.666-6.132 7.215-6.013 2.629.08 3.874 1.786 3.946 5.862z"/></svg>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.977 6.416c-.105 2.338-1.739 5.543-4.894 9.609-3.268 4.247-6.026 6.37-8.29 6.37-1.409 0-2.578-1.294-3.553-3.881L5.322 12.5C4.603 9.913 3.83 8.619 3 8.619c-.203 0-.906.427-2.109 1.282L0 8.71c1.329-1.17 2.639-2.339 3.917-3.517C5.579 3.705 6.851 2.913 7.697 2.83c2.012-.19 3.244 1.18 3.699 4.113.495 3.157.838 5.121 1.027 5.891.57 2.578 1.194 3.868 1.876 3.868.532 0 1.337-.842 2.413-2.525 1.079-1.682 1.658-2.966 1.73-3.852.145-1.458-.42-2.193-1.73-2.193-.615 0-1.248.141-1.896.435 1.26-4.127 3.666-6.132 7.215-6.013 2.629.08 3.874 1.786 3.946 5.862z"/></svg>
         Vimeo Portfolio
       </a>
     </div>
   </div>
 </section>
 
-<!-- CLIENTS MARQUEE (bottom) -->
-<div class="mq">
+<!-- CLIENTS MARQUEE -->
+<div class="mq" aria-label="Clients">
   <div class="mq-inner">
-    <span class="mi">MTV</span><span class="md"></span>
-    <span class="mi">Nickelodeon</span><span class="md"></span>
-    <span class="mi">Paramount Channel</span><span class="md"></span>
-    <span class="mi">Comedy Central</span><span class="md"></span>
-    <span class="mi">RAI</span><span class="md"></span>
-    <span class="mi">Mediaset</span><span class="md"></span>
-    <span class="mi">Viacom</span><span class="md"></span>
-    <span class="mi">DeA Kids</span><span class="md"></span>
-    <span class="mi">Stand By Me</span><span class="md"></span>
-    <span class="mi">Mosaicoon</span><span class="md"></span>
-    <span class="mi">Connexia</span><span class="md"></span>
-    <span class="mi">3D Clouds</span><span class="md"></span>
-    <span class="mi">YAM112003</span><span class="md"></span>
-    <span class="mi">Bearoll</span><span class="md"></span>
-    <span class="mi">Due-B Produzioni</span><span class="md"></span>
-    <span class="mi">Social Content Factory</span><span class="md"></span>
-    <span class="mi">MTV</span><span class="md"></span>
-    <span class="mi">Nickelodeon</span><span class="md"></span>
-    <span class="mi">Paramount Channel</span><span class="md"></span>
-    <span class="mi">Comedy Central</span><span class="md"></span>
-    <span class="mi">RAI</span><span class="md"></span>
-    <span class="mi">Mediaset</span><span class="md"></span>
-    <span class="mi">Viacom</span><span class="md"></span>
-    <span class="mi">DeA Kids</span><span class="md"></span>
-    <span class="mi">Stand By Me</span><span class="md"></span>
-    <span class="mi">Mosaicoon</span><span class="md"></span>
-    <span class="mi">Connexia</span><span class="md"></span>
-    <span class="mi">3D Clouds</span><span class="md"></span>
-    <span class="mi">YAM112003</span><span class="md"></span>
-    <span class="mi">Bearoll</span><span class="md"></span>
-    <span class="mi">Due-B Produzioni</span><span class="md"></span>
-    <span class="mi">Social Content Factory</span><span class="md"></span>
+    <span class="mi">MTV</span><span class="md"></span><span class="mi">Nickelodeon</span><span class="md"></span>
+    <span class="mi">Paramount Channel</span><span class="md"></span><span class="mi">Comedy Central</span><span class="md"></span>
+    <span class="mi">RAI</span><span class="md"></span><span class="mi">Mediaset</span><span class="md"></span>
+    <span class="mi">Viacom</span><span class="md"></span><span class="mi">DeA Kids</span><span class="md"></span>
+    <span class="mi">VELUX</span><span class="md"></span><span class="mi">PANDORA</span><span class="md"></span>
+    <span class="mi">Corriere della Sera</span><span class="md"></span><span class="mi">PERUGINA</span><span class="md"></span>
+    <span class="mi">TAKEDA</span><span class="md"></span><span class="mi">LOACKER</span><span class="md"></span>
+    <span class="mi">Poste Italiane</span><span class="md"></span><span class="mi">ITALPIZZA</span><span class="md"></span>
+    <span class="mi">TheSoul Publishing</span><span class="md"></span><span class="mi">Stand By Me</span><span class="md"></span>
+    <span class="mi">Mosaicoon</span><span class="md"></span><span class="mi">Connexia</span><span class="md"></span>
+    <span class="mi">3D Clouds</span><span class="md"></span><span class="mi">YAM112003</span><span class="md"></span>
+    <!-- duplicate -->
+    <span class="mi">MTV</span><span class="md"></span><span class="mi">Nickelodeon</span><span class="md"></span>
+    <span class="mi">Paramount Channel</span><span class="md"></span><span class="mi">Comedy Central</span><span class="md"></span>
+    <span class="mi">RAI</span><span class="md"></span><span class="mi">Mediaset</span><span class="md"></span>
+    <span class="mi">Viacom</span><span class="md"></span><span class="mi">DeA Kids</span><span class="md"></span>
+    <span class="mi">VELUX</span><span class="md"></span><span class="mi">PANDORA</span><span class="md"></span>
+    <span class="mi">Corriere della Sera</span><span class="md"></span><span class="mi">PERUGINA</span><span class="md"></span>
+    <span class="mi">TAKEDA</span><span class="md"></span><span class="mi">LOACKER</span><span class="md"></span>
+    <span class="mi">Poste Italiane</span><span class="md"></span><span class="mi">ITALPIZZA</span><span class="md"></span>
+    <span class="mi">TheSoul Publishing</span><span class="md"></span><span class="mi">Stand By Me</span><span class="md"></span>
+    <span class="mi">Mosaicoon</span><span class="md"></span><span class="mi">Connexia</span><span class="md"></span>
+    <span class="mi">3D Clouds</span><span class="md"></span><span class="mi">YAM112003</span><span class="md"></span>
   </div>
 </div>
 
 <!-- FOOTER -->
 <footer>
   <div class="flogo">NILO</div>
-  <div class="fcopy">&copy; 2025 Nicola Lorusso &middot; Video Director &amp; Motion Designer &middot; Milan, Italy</div>
-  <nav class="fnav">
+  <div class="fcopy">&copy; 2025 Nicola Lorusso &middot; Visual Director &amp; Motion Specialist &middot; Milan, Italy</div>
+  <nav class="fnav" aria-label="Footer navigation">
     <a href="#portfolio">Work</a>
     <a href="#services">Services</a>
     <a href="#process">Process</a>
     <a href="#about">About</a>
-    <a href="/cdn-cgi/l/email-protection#214f484d4e4053554461494e554c40484d0f424e4c">Contact</a>
+    <a href="/cdn-cgi/l/email-protection#95fbfcf9faf4e7e1f0d5fdfae1f8f4fcf9bbf6faf8">Contact</a>
   </nav>
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-/* CANVAS */
+/* CANVAS BACKGROUND */
 (function(){
   const cv=document.getElementById('bgc'),cx=cv.getContext('2d');
   let W,H;
   const rsz=()=>{W=cv.width=innerWidth;H=cv.height=innerHeight};
   rsz();window.addEventListener('resize',rsz);
-  const P=[
-    ['rgba(0,180,255,','rgba(0,210,255,'],
-    ['rgba(26,111,255,','rgba(0,180,255,'],
-    ['rgba(124,79,255,','rgba(26,111,255,'],
-    ['rgba(0,184,160,','rgba(0,210,255,'],
-    ['rgba(26,111,255,','rgba(124,79,255,'],
-  ];
-  function mk(){
-    const c=P[Math.floor(Math.random()*P.length)];
-    const a=(Math.random()*70+10)*Math.PI/180*(Math.random()>.45?1:-1);
-    return{x:Math.random()*W*1.3-W*.15,y:Math.random()*H*.65-H*.05,
-      dx:Math.cos(a),dy:Math.sin(a),len:Math.random()*480+160,
-      spd:Math.random()*.003+.0015,t:Math.random()*2.5,life:1.5+Math.random()*2.5,
-      c0:c[0],c1:c[1],maxA:Math.random()*.5+.12,w:Math.random()*2.2+.4,
-      curve:(Math.random()-.5)*.011,angle:a};
-  }
-  const S=Array.from({length:16},mk);
-  let lt=0;
-  function fr(ts){
-    const dt=Math.min((ts-lt)/1000,.05);lt=ts;
-    cx.clearRect(0,0,W,H);
-    const g=cx.createRadialGradient(W*.72,H*.2,0,W*.72,H*.2,W*.65);
-    g.addColorStop(0,'rgba(5,12,48,.55)');g.addColorStop(1,'rgba(0,0,0,0)');
-    cx.fillStyle=g;cx.fillRect(0,0,W,H);
-    for(let i=0;i<S.length;i++){
-      const s=S[i];s.t+=dt*s.spd*60;
-      if(s.t>s.life){S[i]=mk();continue;}
-      const p=s.t/s.life;
-      const al=p<.12?(p/.12)*s.maxA:p>.72?((1-p)/.28)*s.maxA:s.maxA;
-      s.angle+=s.curve*dt;s.dx=Math.cos(s.angle);s.dy=Math.sin(s.angle);
-      const tl=s.len*Math.min(p*3,1);
-      const x2=s.x+s.dx*tl,y2=s.y+s.dy*tl;
-      const gr=cx.createLinearGradient(s.x,s.y,x2,y2);
-      gr.addColorStop(0,s.c0+'0)');gr.addColorStop(.25,s.c0+(al*.35).toFixed(3)+')');
-      gr.addColorStop(.75,s.c1+al.toFixed(3)+')');gr.addColorStop(1,s.c1+'0)');
-      cx.beginPath();cx.moveTo(s.x,s.y);cx.lineTo(x2,y2);
-      cx.strokeStyle=gr;cx.lineWidth=s.w;cx.lineCap='round';
-      cx.shadowBlur=20;cx.shadowColor=s.c1+(al*.5).toFixed(3)+')';
-      cx.stroke();cx.shadowBlur=0;
-      s.x+=s.dx*s.spd*110*dt;s.y+=s.dy*s.spd*110*dt;
-    }
-    requestAnimationFrame(fr);
-  }
+  const P=[['rgba(0,180,255,','rgba(0,210,255,'],['rgba(26,111,255,','rgba(0,180,255,'],['rgba(124,79,255,','rgba(26,111,255,'],['rgba(0,184,160,','rgba(0,210,255,'],['rgba(26,111,255,','rgba(124,79,255,']];
+  function mk(){const c=P[Math.floor(Math.random()*P.length)];const a=(Math.random()*70+10)*Math.PI/180*(Math.random()>.45?1:-1);return{x:Math.random()*W*1.3-W*.15,y:Math.random()*H*.65-H*.05,dx:Math.cos(a),dy:Math.sin(a),len:Math.random()*480+160,spd:Math.random()*.003+.0015,t:Math.random()*2.5,life:1.5+Math.random()*2.5,c0:c[0],c1:c[1],maxA:Math.random()*.5+.12,w:Math.random()*2.2+.4,curve:(Math.random()-.5)*.011,angle:a}}
+  const S=Array.from({length:16},mk);let lt=0;
+  function fr(ts){const dt=Math.min((ts-lt)/1000,.05);lt=ts;cx.clearRect(0,0,W,H);const g=cx.createRadialGradient(W*.72,H*.2,0,W*.72,H*.2,W*.65);g.addColorStop(0,'rgba(5,12,48,.55)');g.addColorStop(1,'rgba(0,0,0,0)');cx.fillStyle=g;cx.fillRect(0,0,W,H);for(let i=0;i<S.length;i++){const s=S[i];s.t+=dt*s.spd*60;if(s.t>s.life){S[i]=mk();continue;}const p=s.t/s.life;const al=p<.12?(p/.12)*s.maxA:p>.72?((1-p)/.28)*s.maxA:s.maxA;s.angle+=s.curve*dt;s.dx=Math.cos(s.angle);s.dy=Math.sin(s.angle);const tl=s.len*Math.min(p*3,1);const x2=s.x+s.dx*tl,y2=s.y+s.dy*tl;const gr=cx.createLinearGradient(s.x,s.y,x2,y2);gr.addColorStop(0,s.c0+'0)');gr.addColorStop(.25,s.c0+(al*.35).toFixed(3)+')');gr.addColorStop(.75,s.c1+al.toFixed(3)+')');gr.addColorStop(1,s.c1+'0)');cx.beginPath();cx.moveTo(s.x,s.y);cx.lineTo(x2,y2);cx.strokeStyle=gr;cx.lineWidth=s.w;cx.lineCap='round';cx.shadowBlur=20;cx.shadowColor=s.c1+(al*.5).toFixed(3)+')';cx.stroke();cx.shadowBlur=0;s.x+=s.dx*s.spd*110*dt;s.y+=s.dy*s.spd*110*dt;}requestAnimationFrame(fr);}
   requestAnimationFrame(fr);
 })();
 
@@ -774,29 +768,79 @@ window.addEventListener('scroll',()=>nav.classList.toggle('on',scrollY>60),{pass
 
 /* REVEAL */
 const io=new IntersectionObserver(e=>{
-  e.forEach(x=>{
-    if(!x.isIntersecting)return;
-    x.target.classList.add('on');
-    x.target.querySelectorAll('.sk-fill').forEach(b=>{
-      b.style.transform=`scaleX(${b.dataset.w})`;b.classList.add('go');
-    });
-    io.unobserve(x.target);
-  });
+  e.forEach(x=>{if(!x.isIntersecting)return;x.target.classList.add('on');x.target.querySelectorAll('.sk-fill').forEach(b=>{b.style.transform=`scaleX(${b.dataset.w})`;b.classList.add('go');});io.unobserve(x.target);});
 },{threshold:.08});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-/* PORTFOLIO FILTER */
-const tabs=document.querySelectorAll('.ftab');
-const items=document.querySelectorAll('.pitem');
-tabs.forEach(tab=>{
-  tab.addEventListener('click',()=>{
-    tabs.forEach(t=>t.classList.remove('active'));
-    tab.classList.add('active');
-    const f=tab.dataset.filter;
-    items.forEach(item=>{
-      const cats=item.dataset.cat||'all';
-      if(f==='all'||cats.split(' ').includes(f)){item.classList.remove('hidden')}else{item.classList.add('hidden')}
+/* PORTFOLIO FILTER + AUTO-SCROLL — fixed */
+(function(){
+  const NAV_H      = 76;
+  const EXTRA_PAD  = 20; // breathing room above filter bar
+  const tabs       = document.querySelectorAll('.ftab');
+  const items      = document.querySelectorAll('.pitem');
+  const filterBar  = document.querySelector('.filter-tabs'); // scroll target
+
+  /* ── APPLY FILTER ──────────────────────────────────────────────────────────
+     data-cat="all"  → showreel: visible ONLY when filter is "all"
+     data-cat="*"    → category item: visible when filter === cat OR filter === 'all'
+  ─────────────────────────────────────────────────────────────────────────── */
+  function applyFilter(f){
+    items.forEach(function(item){
+      var cat = item.dataset.cat || '';
+      var show;
+      if(cat === 'all'){
+        // showreel block — only in "All Works" view
+        show = (f === 'all');
+      } else {
+        show = (f === 'all' || cat === f);
+      }
+      if(show){
+        item.classList.remove('hidden');
+      } else {
+        item.classList.add('hidden');
+      }
     });
+  }
+
+  /* ── SMART AUTO-SCROLL ─────────────────────────────────────────────────────
+     Scrolls so the filter-tabs bar lands just below the fixed nav, giving the
+     user a clear view of the selected category content.
+     Two nested rAF calls guarantee the DOM has fully reflowed before we measure.
+  ─────────────────────────────────────────────────────────────────────────── */
+  function scrollToFilterBar(){
+    requestAnimationFrame(function(){
+      requestAnimationFrame(function(){
+        var rect   = filterBar.getBoundingClientRect();
+        var target = rect.top + window.pageYOffset - NAV_H - EXTRA_PAD;
+        window.scrollTo({ top: target, behavior: 'smooth' });
+      });
+    });
+  }
+
+  /* ── EVENT BINDING ─────────────────────────────────────────────────────── */
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      if(tab.classList.contains('active')) return; // no-op if already selected
+      tabs.forEach(function(t){ t.classList.remove('active'); });
+      tab.classList.add('active');
+      applyFilter(tab.dataset.filter);
+      scrollToFilterBar();
+    });
+    tab.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); tab.click(); }
+    });
+  });
+})();
+
+/* SMOOTH SCROLL for anchor links */
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click', function(e){
+    var t = document.querySelector(a.getAttribute('href'));
+    if(t){
+      e.preventDefault();
+      var top = t.getBoundingClientRect().top + window.pageYOffset - 70;
+      window.scrollTo({top: top, behavior: 'smooth'});
+    }
   });
 });
 </script>
