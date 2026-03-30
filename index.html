@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="google-site-verification" content="zzX_GjxNWdlUZ_hghWITtkZ4KiZJNwgsAzk4yF7n2ks" />
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="description" content="Nicola Lorusso — Visual Director &amp; Motion Specialist based in Milan. Post-Production, Motion Graphics and Live Event Media. Shaping strategic storytelling through advanced motion design for brands, broadcasters and agencies worldwide."/>
@@ -233,10 +232,112 @@ footer{position:relative;z-index:10;border-top:1px solid var(--brd);padding:32px
 @keyframes mqx{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @keyframes pls{0%,100%{opacity:.3}50%{opacity:1}}
 
-/* RESPONSIVE */
+/* ── HAMBURGER BUTTON ─────────────────────────── */
+.ham{display:none;flex-direction:column;justify-content:center;gap:5px;width:38px;height:38px;background:none;border:1px solid var(--brd);border-radius:8px;cursor:pointer;padding:7px 8px;transition:border-color .2s;z-index:1001;flex-shrink:0}
+.ham:hover{border-color:var(--brdh)}
+.ham span{display:block;height:1.5px;background:var(--white);border-radius:2px;transition:transform .3s,opacity .3s,width .3s}
+.ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.ham.open span:nth-child(2){opacity:0;width:0}
+.ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+/* ── MOBILE MENU OVERLAY ──────────────────────── */
+#mob-menu{
+  position:fixed;inset:0;z-index:998;
+  background:rgba(3,3,14,.97);backdrop-filter:blur(24px);
+  display:flex;flex-direction:column;justify-content:center;align-items:center;gap:0;
+  opacity:0;pointer-events:none;transition:opacity .3s ease;
+}
+#mob-menu.open{opacity:1;pointer-events:all}
+.mob-link{
+  font-family:var(--ft);font-size:clamp(38px,10vw,60px);letter-spacing:.08em;
+  text-transform:uppercase;color:rgba(255,255,255,.55);text-decoration:none;
+  padding:14px 40px;display:block;transition:color .2s,transform .2s;
+  transform:translateY(20px);opacity:0;transition:color .2s,transform .4s ease,opacity .4s ease;
+}
+#mob-menu.open .mob-link{transform:none;opacity:1}
+#mob-menu.open .mob-link:nth-child(1){transition-delay:.05s}
+#mob-menu.open .mob-link:nth-child(2){transition-delay:.1s}
+#mob-menu.open .mob-link:nth-child(3){transition-delay:.15s}
+#mob-menu.open .mob-link:nth-child(4){transition-delay:.2s}
+#mob-menu.open .mob-link:nth-child(5){transition-delay:.25s}
+.mob-link:hover{color:var(--white);transform:translateX(8px)}
+.mob-cta{
+  margin-top:28px;font-family:var(--fb);font-size:13px;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;color:#fff;
+  background:var(--g1);padding:14px 38px;border-radius:30px;
+  text-decoration:none;box-shadow:0 0 30px var(--glow);
+  transform:translateY(20px);opacity:0;transition:transform .4s ease .3s,opacity .4s ease .3s,box-shadow .2s;
+}
+#mob-menu.open .mob-cta{transform:none;opacity:1}
+.mob-cta:hover{box-shadow:0 0 50px var(--glow)}
+.mob-footer{
+  position:absolute;bottom:32px;left:0;right:0;
+  display:flex;justify-content:center;gap:24px;
+}
+.mob-footer a{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.28);text-decoration:none;transition:color .2s}
+.mob-footer a:hover{color:rgba(255,255,255,.7)}
+
+/* ── COOKIE BANNER ────────────────────────────── */
+#cookie-banner{
+  position:fixed;bottom:0;left:0;right:0;z-index:9000;
+  background:rgba(7,7,26,.97);border-top:1px solid var(--brd);
+  backdrop-filter:blur(20px);
+  display:flex;align-items:center;justify-content:space-between;
+  gap:20px;padding:18px 40px;flex-wrap:wrap;
+  transform:translateY(0);transition:transform .4s ease;
+}
+#cookie-banner.hidden{transform:translateY(110%)}
+.ck-text{font-size:12px;color:var(--muted);line-height:1.6;max-width:680px}
+.ck-text a{color:var(--cyan);text-decoration:none}
+.ck-text a:hover{text-decoration:underline}
+.ck-btns{display:flex;gap:10px;flex-shrink:0;flex-wrap:wrap}
+.ck-btn{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:9px 22px;border-radius:30px;cursor:pointer;border:none;transition:all .2s}
+.ck-acc{background:var(--g1);color:#fff;box-shadow:0 0 18px var(--glow)}
+.ck-acc:hover{box-shadow:0 0 30px var(--glow);transform:translateY(-1px)}
+.ck-rej{background:transparent;color:var(--muted);border:1px solid var(--brd)}
+.ck-rej:hover{border-color:var(--brdh);color:var(--white)}
+
+/* ── LEGAL MODALS ─────────────────────────────── */
+.legal-overlay{
+  position:fixed;inset:0;z-index:8000;
+  background:rgba(3,3,14,.92);backdrop-filter:blur(16px);
+  display:flex;align-items:flex-start;justify-content:center;
+  padding:40px 20px 40px;overflow-y:auto;
+  opacity:0;pointer-events:none;transition:opacity .3s ease;
+}
+.legal-overlay.open{opacity:1;pointer-events:all}
+.legal-box{
+  background:var(--surf);border:1px solid var(--brd);border-radius:16px;
+  max-width:780px;width:100%;padding:56px 52px;position:relative;
+  margin:auto;
+}
+.legal-close{
+  position:absolute;top:20px;right:20px;
+  width:36px;height:36px;border-radius:50%;border:1px solid var(--brd);
+  background:none;cursor:pointer;display:flex;align-items:center;justify-content:center;
+  color:var(--muted);font-size:18px;transition:all .2s;
+}
+.legal-close:hover{border-color:var(--brdh);color:var(--white)}
+.legal-tag{font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--cyan);margin-bottom:12px}
+.legal-title{font-family:var(--ft);font-size:clamp(28px,4vw,44px);letter-spacing:.04em;text-transform:uppercase;color:var(--white);margin-bottom:8px}
+.legal-date{font-size:11px;color:var(--gray);letter-spacing:.08em;margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid var(--brd)}
+.legal-box h3{font-family:var(--ft);font-size:16px;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);margin:28px 0 10px}
+.legal-box p,.legal-box li{font-size:13px;color:var(--muted);line-height:1.85;margin-bottom:10px}
+.legal-box ul{padding-left:18px;margin-bottom:12px}
+.legal-box strong{color:var(--white);font-weight:500}
+.legal-box a{color:var(--cyan);text-decoration:none}
+.legal-box a:hover{text-decoration:underline}
+
+/* ── FOOTER LEGAL ROW ────────────────────────── */
+.flegal{width:100%;text-align:center;padding-top:16px;border-top:1px solid var(--brd);margin-top:16px;display:flex;justify-content:center;gap:24px;flex-wrap:wrap}
+.flegal a{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);text-decoration:none;transition:color .2s}
+.flegal a:hover{color:var(--cyan)}
+
+/* ── RESPONSIVE ───────────────────────────────── */
 @media(max-width:960px){
   #nav{padding:0 24px}
   .nmenu{display:none}
+  .ham{display:flex}
   #hero,.sec,#contact{padding-left:24px;padding-right:24px}
   .hh1{font-size:clamp(62px,14vw,100px)}
   .hrow{flex-direction:column;align-items:flex-start}
@@ -250,11 +351,142 @@ footer{position:relative;z-index:10;border-top:1px solid var(--brd);padding:32px
   .shint{display:none}
   .vinfo{grid-template-columns:1fr}
   .vinfo-col:first-child{border-right:none;border-bottom:1px solid var(--brd)}
+  #cookie-banner{padding:16px 20px}
+  .legal-box{padding:40px 24px}
 }
 </style>
 </head>
 <body>
 <canvas id="bgc"></canvas>
+
+<!-- MOBILE MENU -->
+<div id="mob-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <a href="#portfolio" class="mob-link">Work</a>
+  <a href="#services" class="mob-link">Services</a>
+  <a href="#process" class="mob-link">Process</a>
+  <a href="#about" class="mob-link">About</a>
+  <a href="mailto:niloarte@hotmail.com" class="mob-cta">Start a Project</a>
+  <div class="mob-footer">
+    <a href="#" onclick="openLegal('privacy');return false;">Privacy Policy</a>
+    <a href="#" onclick="openLegal('terms');return false;">Terms &amp; Conditions</a>
+    <a href="#" onclick="openLegal('cookie');return false;">Cookie Policy</a>
+  </div>
+</div>
+
+<!-- COOKIE CONSENT BANNER -->
+<div id="cookie-banner" role="region" aria-label="Cookie consent">
+  <p class="ck-text">
+    🍪 We use cookies to analyse site traffic and improve your experience. By continuing to browse, you agree to our use of cookies.
+    <a href="#" onclick="openLegal('cookie');return false;">Cookie Policy</a> &middot;
+    <a href="#" onclick="openLegal('privacy');return false;">Privacy Policy</a>
+  </p>
+  <div class="ck-btns">
+    <button class="ck-btn ck-rej" onclick="rejectCookies()">Reject</button>
+    <button class="ck-btn ck-acc" onclick="acceptCookies()">Accept All</button>
+  </div>
+</div>
+
+<!-- PRIVACY POLICY MODAL -->
+<div id="modal-privacy" class="legal-overlay" role="dialog" aria-modal="true" aria-labelledby="pp-title">
+  <div class="legal-box">
+    <button class="legal-close" onclick="closeLegal('privacy')" aria-label="Close">&times;</button>
+    <div class="legal-tag">Legal</div>
+    <div class="legal-title" id="pp-title">Privacy Policy</div>
+    <div class="legal-date">Last updated: January 2025 &nbsp;&middot;&nbsp; niloarte.com</div>
+    <h3>1. Data Controller</h3>
+    <p>The data controller for this website is <strong>Nicola Lorusso</strong>, operating as NILO Studio, based in Milan, Italy. Contact: <a href="mailto:niloarte@hotmail.com">niloarte@hotmail.com</a>.</p>
+    <h3>2. Data We Collect</h3>
+    <p>When you use this website, we may collect the following categories of personal data:</p>
+    <ul>
+      <li><strong>Navigation data:</strong> IP address, browser type, operating system, referring URL, pages visited, timestamps — collected automatically by web server logs and analytics tools.</li>
+      <li><strong>Contact data:</strong> Name, email address, phone number, and any message content you voluntarily send via email or contact forms.</li>
+      <li><strong>Cookie data:</strong> Functional and analytical cookies as described in our Cookie Policy.</li>
+    </ul>
+    <h3>3. Legal Basis for Processing</h3>
+    <p>We process your data on the following legal bases under the GDPR (Regulation EU 2016/679):</p>
+    <ul>
+      <li><strong>Legitimate interest</strong> (Art. 6(1)(f)) — for website security, fraud prevention, and basic analytics.</li>
+      <li><strong>Consent</strong> (Art. 6(1)(a)) — for non-essential cookies and marketing communications, where you have given explicit consent.</li>
+      <li><strong>Contractual necessity</strong> (Art. 6(1)(b)) — when processing your data is necessary to respond to a project enquiry or fulfil a service agreement.</li>
+    </ul>
+    <h3>4. How We Use Your Data</h3>
+    <ul>
+      <li>To respond to project enquiries and communications.</li>
+      <li>To improve the performance and usability of the website.</li>
+      <li>To comply with legal obligations.</li>
+      <li>To analyse anonymous traffic for statistical purposes.</li>
+    </ul>
+    <h3>5. Data Sharing</h3>
+    <p>We do not sell, rent, or trade your personal data. Data may be shared with trusted third-party service providers (e.g. hosting provider, email service, analytics) strictly for operational purposes and under data processing agreements that ensure GDPR compliance.</p>
+    <h3>6. Data Retention</h3>
+    <p>Contact data is retained for as long as necessary to respond to your enquiry and manage any resulting professional relationship, typically no longer than 3 years. Navigation logs are retained for up to 12 months. You may request deletion at any time.</p>
+    <h3>7. Your Rights</h3>
+    <p>Under GDPR, you have the right to: access your personal data; correct inaccurate data; request erasure ("right to be forgotten"); restrict processing; object to processing; and data portability. To exercise any of these rights, contact us at <a href="mailto:niloarte@hotmail.com">niloarte@hotmail.com</a>. You also have the right to lodge a complaint with the Italian Data Protection Authority (Garante della Privacy): <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">garanteprivacy.it</a>.</p>
+    <h3>8. Transfers Outside the EEA</h3>
+    <p>Where third-party service providers are located outside the European Economic Area, we ensure appropriate safeguards are in place (e.g. Standard Contractual Clauses or adequacy decisions).</p>
+    <h3>9. Changes to This Policy</h3>
+    <p>This Privacy Policy may be updated periodically. The date at the top of this page indicates the most recent revision. We encourage you to review it when you visit the site.</p>
+  </div>
+</div>
+
+<!-- TERMS & CONDITIONS MODAL -->
+<div id="modal-terms" class="legal-overlay" role="dialog" aria-modal="true" aria-labelledby="tc-title">
+  <div class="legal-box">
+    <button class="legal-close" onclick="closeLegal('terms')" aria-label="Close">&times;</button>
+    <div class="legal-tag">Legal</div>
+    <div class="legal-title" id="tc-title">Terms &amp; Conditions</div>
+    <div class="legal-date">Last updated: January 2025 &nbsp;&middot;&nbsp; niloarte.com</div>
+    <h3>1. Acceptance of Terms</h3>
+    <p>By accessing and using niloarte.com (the "Website"), you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you must not use this Website.</p>
+    <h3>2. Intellectual Property</h3>
+    <p>All content published on this Website — including but not limited to video works, motion graphics, text, images, design, and the NILO brand identity — is the exclusive intellectual property of <strong>Nicola Lorusso</strong>. Reproduction, distribution, or adaptation of any content without prior written consent is strictly prohibited. Portfolio works may also be subject to third-party intellectual property rights belonging to respective clients.</p>
+    <h3>3. Use of the Website</h3>
+    <p>This Website is provided for informational and portfolio presentation purposes only. You agree not to:</p>
+    <ul>
+      <li>Use the site for any unlawful purpose or in violation of applicable regulations.</li>
+      <li>Attempt to gain unauthorised access to any part of the Website or its infrastructure.</li>
+      <li>Reproduce, copy, or exploit any content for commercial purposes without explicit written permission.</li>
+      <li>Transmit any malicious code, spam, or harmful content.</li>
+    </ul>
+    <h3>4. Project Enquiries &amp; Services</h3>
+    <p>Any enquiries submitted via this Website do not constitute a contractual obligation. Engagements for professional services are formalised by separate written agreements (project brief, proposal, or contract) between the client and Nicola Lorusso / NILO Studio. All service terms, fees, delivery timelines, and rights transfer conditions are defined in those agreements.</p>
+    <h3>5. Disclaimer of Warranties</h3>
+    <p>This Website is provided "as is" without warranties of any kind, express or implied. NILO Studio does not guarantee the Website will be uninterrupted, error-free, or free from viruses. We do not warrant the accuracy or completeness of any information on the Website.</p>
+    <h3>6. Limitation of Liability</h3>
+    <p>To the fullest extent permitted by law, Nicola Lorusso / NILO Studio shall not be liable for any indirect, incidental, consequential, or punitive damages arising from your use of the Website or reliance on any content published therein.</p>
+    <h3>7. Third-Party Links</h3>
+    <p>This Website may contain links to third-party platforms (e.g. Vimeo). NILO Studio is not responsible for the content, privacy practices, or policies of those external sites.</p>
+    <h3>8. Governing Law</h3>
+    <p>These Terms are governed by Italian law. Any disputes shall be subject to the exclusive jurisdiction of the courts of Milan, Italy.</p>
+    <h3>9. Changes to These Terms</h3>
+    <p>We reserve the right to modify these Terms at any time. Changes will be effective immediately upon publication on this page. Continued use of the Website constitutes acceptance of the revised Terms.</p>
+    <h3>10. Contact</h3>
+    <p>For any questions regarding these Terms, contact: <a href="mailto:niloarte@hotmail.com">niloarte@hotmail.com</a></p>
+  </div>
+</div>
+
+<!-- COOKIE POLICY MODAL -->
+<div id="modal-cookie" class="legal-overlay" role="dialog" aria-modal="true" aria-labelledby="cp-title">
+  <div class="legal-box">
+    <button class="legal-close" onclick="closeLegal('cookie')" aria-label="Close">&times;</button>
+    <div class="legal-tag">Legal</div>
+    <div class="legal-title" id="cp-title">Cookie Policy</div>
+    <div class="legal-date">Last updated: January 2025 &nbsp;&middot;&nbsp; niloarte.com</div>
+    <h3>What Are Cookies?</h3>
+    <p>Cookies are small text files stored on your device by a website you visit. They are widely used to make websites function, work more efficiently, and to provide information to the website owner.</p>
+    <h3>Cookies We Use</h3>
+    <p><strong>Essential / Functional Cookies</strong> — These are strictly necessary for the Website to operate. They do not collect personal data and cannot be disabled. They include your cookie consent preference stored locally on your device.</p>
+    <p><strong>Analytical / Performance Cookies</strong> — If you consent, we may use analytics tools to collect anonymous data about how visitors use the Website (pages visited, session duration, referral source). This helps us improve the site. No personally identifiable data is collected through analytics.</p>
+    <p><strong>Third-Party Embedded Content</strong> — This Website embeds video players from <strong>Vimeo</strong>. When you play a video, Vimeo may set its own cookies subject to their privacy policy (<a href="https://vimeo.com/privacy" target="_blank" rel="noopener">vimeo.com/privacy</a>). We use the <code>dnt=1</code> parameter on all embeds to request that Vimeo respects your Do Not Track preference.</p>
+    <h3>Managing Cookies</h3>
+    <p>You can control and delete cookies through your browser settings. Most browsers allow you to refuse new cookies, delete existing cookies, and warn you when a website attempts to set cookies. Please note that disabling cookies may affect the functionality of this Website.</p>
+    <p>You can also opt out of analytics tracking at any time by clicking "Reject" in the cookie consent banner, which is displayed on your first visit.</p>
+    <h3>Your Consent</h3>
+    <p>By clicking "Accept All" on the cookie banner, you consent to our use of functional and analytical cookies as described above. You can withdraw this consent at any time by clearing your browser cookies and revisiting the site.</p>
+    <h3>Contact</h3>
+    <p>For cookie-related questions: <a href="mailto:niloarte@hotmail.com">niloarte@hotmail.com</a></p>
+  </div>
+</div>
 
 <!-- NAV -->
 <nav id="nav">
@@ -266,6 +498,9 @@ footer{position:relative;z-index:10;border-top:1px solid var(--brd);padding:32px
     <li><a href="#about">About</a></li>
     <li><a href="#contact" class="ncta">Start a Project</a></li>
   </ul>
+  <button class="ham" id="ham-btn" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- HERO -->
@@ -640,7 +875,7 @@ footer{position:relative;z-index:10;border-top:1px solid var(--brd);padding:32px
       <p>Collaborations include MTV, Nickelodeon, Paramount Channel, RAI, Mediaset, Viacom, Comedy Central, DeA Kids and a range of production companies and digital agencies</p>
       <div class="about-btns">
         <a href="https://vimeo.com/niloarte" target="_blank" rel="noopener" class="btn btn-p">Vimeo Portfolio</a>
-        <a href="/cdn-cgi/l/email-protection#432d2a2f2c22313726032b2c372e222a2f6d202c2e" class="btn btn-s"><span class="__cf_email__" data-cfemail="9af4f3f6f5fbe8eeffdaf2f5eef7fbf3f6b4f9f5f7">[email&#160;protected]</span></a>
+        <a href="mailto:niloarte@hotmail.com" class="btn btn-s">niloarte@hotmail.com</a>
       </div>
     </div>
     <div class="skills-panel reveal">
@@ -694,7 +929,7 @@ footer{position:relative;z-index:10;border-top:1px solid var(--brd);padding:32px
     </h2>
     <p class="cta-sub">Available for branded content, TV production, corporate video, motion design and post-production projects worldwide</p>
     <div class="cta-btns">
-      <a href="/cdn-cgi/l/email-protection#82ecebeeede3f0f6e7c2eaedf6efe3ebeeace1edef" class="btn btn-p"><span class="__cf_email__" data-cfemail="630d0a0f0c02111706230b0c170e020a0f4d000c0e">[email&#160;protected]</span></a>
+      <a href="mailto:niloarte@hotmail.com" class="btn btn-p">Start a Project</a>
       <a href="tel:+393384354240" class="btn-lnk">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.73a16 16 0 006.29 6.29l1.1-1.1a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
         +39 338 435 4240
@@ -745,11 +980,16 @@ footer{position:relative;z-index:10;border-top:1px solid var(--brd);padding:32px
     <a href="#services">Services</a>
     <a href="#process">Process</a>
     <a href="#about">About</a>
-    <a href="/cdn-cgi/l/email-protection#95fbfcf9faf4e7e1f0d5fdfae1f8f4fcf9bbf6faf8">Contact</a>
+    <a href="mailto:niloarte@hotmail.com">Contact</a>
   </nav>
+  <div class="flegal">
+    <a href="#" onclick="openLegal('privacy');return false;">Privacy Policy</a>
+    <a href="#" onclick="openLegal('terms');return false;">Terms &amp; Conditions</a>
+    <a href="#" onclick="openLegal('cookie');return false;">Cookie Policy</a>
+  </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 /* CANVAS BACKGROUND */
 (function(){
   const cv=document.getElementById('bgc'),cx=cv.getContext('2d');
@@ -842,6 +1082,61 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){
       var top = t.getBoundingClientRect().top + window.pageYOffset - 70;
       window.scrollTo({top: top, behavior: 'smooth'});
     }
+  });
+});
+
+/* ── MOBILE HAMBURGER MENU ─────────────────────────────────────────── */
+(function(){
+  var btn  = document.getElementById('ham-btn');
+  var menu = document.getElementById('mob-menu');
+  function openMenu(){
+    btn.classList.add('open');menu.classList.add('open');
+    btn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';
+  }
+  function closeMenu(){
+    btn.classList.remove('open');menu.classList.remove('open');
+    btn.setAttribute('aria-expanded','false');document.body.style.overflow='';
+  }
+  btn.addEventListener('click',function(){ btn.classList.contains('open')?closeMenu():openMenu(); });
+  menu.querySelectorAll('.mob-link,.mob-cta').forEach(function(a){
+    a.addEventListener('click',function(){ setTimeout(closeMenu,80); });
+  });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeMenu(); });
+})();
+
+/* ── COOKIE BANNER ────────────────────────────────────────────────── */
+(function(){
+  if(localStorage.getItem('ck_consent')){
+    var b=document.getElementById('cookie-banner');
+    if(b) b.classList.add('hidden');
+  }
+})();
+function acceptCookies(){
+  localStorage.setItem('ck_consent','accepted');
+  var b=document.getElementById('cookie-banner');if(b)b.classList.add('hidden');
+}
+function rejectCookies(){
+  localStorage.setItem('ck_consent','rejected');
+  var b=document.getElementById('cookie-banner');if(b)b.classList.add('hidden');
+}
+
+/* ── LEGAL MODALS ─────────────────────────────────────────────────── */
+function openLegal(id){
+  document.querySelectorAll('.legal-overlay.open').forEach(function(m){m.classList.remove('open');});
+  var m=document.getElementById('modal-'+id);
+  if(m){
+    m.classList.add('open');m.scrollTop=0;document.body.style.overflow='hidden';
+    m.onclick=function(e){ if(e.target===m) closeLegal(id); };
+  }
+}
+function closeLegal(id){
+  var m=document.getElementById('modal-'+id);
+  if(m) m.classList.remove('open');
+  if(!document.querySelector('.legal-overlay.open')) document.body.style.overflow='';
+}
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape') document.querySelectorAll('.legal-overlay.open').forEach(function(m){
+    closeLegal(m.id.replace('modal-',''));
   });
 });
 </script>
