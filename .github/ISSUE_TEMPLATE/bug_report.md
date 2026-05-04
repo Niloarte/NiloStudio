@@ -1,9 +1,10 @@
 ---
 name: Bug report
 about: Report a technical issue with the site
-title: '[BUG] '
+title: "[BUG] "
 labels: bug
 assignees: Niloarte
+
 ---
 
 ## What happened?
