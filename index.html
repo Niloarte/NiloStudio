@@ -85,6 +85,7 @@ body{background:var(--bg);color:var(--white);font-family:var(--fb);font-weight:3
 .hdesc{font-size:15px;color:var(--muted);max-width:480px;line-height:1.82}
 .hacts{display:flex;gap:14px;flex-shrink:0}
 .hstats{display:flex;gap:0;margin-top:56px;border-top:1px solid var(--brd);opacity:0;animation:fu .9s ease .9s forwards}
+.hstats{display:flex;gap:0;margin-top:56px;border-top:1px solid var(--brd);opacity:0;animation:fu .9s ease .9s forwards}
 .hstat{flex:1;padding:24px 0 0;border-right:1px solid var(--brd)}
 .hstat:last-child{border-right:none}
 .hstat-n{font-family:var(--ft);font-size:38px;letter-spacing:-.02em;color:var(--white);line-height:1}
@@ -458,3 +459,217 @@ footer{position:relative;z-index:10;border-top:1px solid var(--brd);padding:32px
       <li>Reproduce, copy, or exploit any content for commercial purposes without explicit written permission.</li>
       <li>Transmit any malicious code, spam, or harmful content.</li>
     </ul>
+  </div>
+</div>
+
+<!-- COOKIE POLICY MODAL -->
+<div id="modal-cookie" class="legal-overlay" role="dialog" aria-modal="true" aria-labelledby="cp-title">
+  <div class="legal-box">
+    <button class="legal-close" onclick="closeLegal('cookie')" aria-label="Close">&times;</button>
+    <div class="legal-tag">Legal</div>
+    <div class="legal-title" id="cp-title">Cookie Policy</div>
+    <div class="legal-date">Last updated: January 2025 &nbsp;&middot;&nbsp; niloarte.com</div>
+    <h3>1. What Are Cookies</h3>
+    <p>Cookies are small text files placed on your device to store data that can be recalled by a web server. We use cookies to remember your preferences, analyse site traffic, and ensure the website functions securely.</p>
+    <h3>2. Categories of Cookies We Use</h3>
+    <ul>
+      <li><strong>Necessary Cookies:</strong> Required for fundamental site functionality, navigation, and security. The site cannot function correctly without them.</li>
+      <li><strong>Analytical Cookies:</strong> Help us understand how visitors interact with the website by collecting and reporting information anonymously (e.g. visit counts, page duration).</li>
+    </ul>
+    <h3>3. Third-Party Cookies</h3>
+    <p>We use embedded services from third parties, such as <strong>Vimeo</strong> for video playback. These providers may place cookies on your device when you play a video to track usage statistics and user preferences. We do not control these third-party cookies. Please consult Vimeo's cookie policy for details.</p>
+    <h3>4. Managing Cookie Consent</h3>
+    <p>When you first visit the Website, you will see a consent banner. You can choose to "Accept All" or "Reject" non-essential cookies. You can update your preferences or withdraw consent at any time by clearing your browser cache or clicking the policy links in the footer.</p>
+  </div>
+</div>
+
+<!-- MAIN JAVASCRIPT -->
+<script>
+// --- THREE.JS FIELD ENGINE ---
+let canvas, ctx, w, h, animationId;
+let stars = [];
+const maxStars = 38;
+let mouse = { x: null, y: null, tx: null, ty: null };
+let lastScrollY = window.scrollY;
+
+function initCanvas() {
+  canvas = document.getElementById('bgc');
+  if(!canvas) return;
+  ctx = canvas.getContext('2d');
+  resizeCanvas();
+  stars = [];
+  for(let i=0; i<maxStars; i++) {
+    stars.push({
+      x: Math.random() * w,
+      y: Math.random() * h,
+      z: Math.random() * w,
+      ox: Math.random() * 40 - 20,
+      oy: Math.random() * 40 - 20,
+      size: Math.random() * 1.5 + 0.5,
+      color: Math.random() > 0.45 ? 'rgba(0, 207, 255, ' + (Math.random()*0.35+0.15) + ')' : 'rgba(124, 79, 255, ' + (Math.random()*0.3+0.1) + ')'
+    });
+  }
+  if(animationId) cancelAnimationFrame(animationId);
+  anim();
+}
+
+function resizeCanvas() {
+  w = window.innerWidth;
+  h = window.innerHeight;
+  if(canvas) { canvas.width = w; canvas.height = h; }
+}
+
+function anim() {
+  ctx.fillStyle = '#03030e';
+  ctx.fillRect(0,0,w,h);
+  
+  let dx = 0, dy = 0;
+  if(mouse.x !== null) {
+    mouse.x += (mouse.tx - mouse.x) * 0.08;
+    mouse.y += (mouse.ty - mouse.y) * 0.08;
+    dx = (mouse.x - w/2) * 0.025;
+    dy = (mouse.y - h/2) * 0.025;
+  }
+  
+  for(let i=0; i<stars.length; i++) {
+    let s = stars[i];
+    s.z -= 0.35;
+    if(s.z <= 0) { s.z = w; s.x = Math.random() * w; s.y = Math.random() * h; }
+    
+    let k = 128 / s.z;
+    let px = (s.x - w/2 + dx + s.ox*0.3) * k + w/2;
+    let py = (s.y - h/2 + dy + s.oy*0.3) * k + h/2;
+    
+    if(px >= 0 && px <= w && py >= 0 && py <= h) {
+      let sz = s.size * (1 - s.z/w) * 4;
+      if(sz < 0.5) sz = 0.5;
+      ctx.beginPath();
+      ctx.arc(px, py, sz, 0, Math.PI*2);
+      ctx.fillStyle = s.color;
+      ctx.fill();
+    }
+  }
+  animationId = requestAnimationFrame(anim);
+}
+
+// --- INTERSECTION OBSERVER REVEAL ---
+const revealElements = document.querySelectorAll('.reveal');
+const observerOptions = { root: null, threshold: 0.05, rootMargin: '0px 0px -40px 0px' };
+const revealObserver = new IntersectionObserver((entries, obs) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      entry.target.classList.add('on');
+      const fills = entry.target.querySelectorAll('.sk-fill');
+      fills.forEach(f => f.classList.add('go'));
+      obs.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
+revealElements.forEach(el => revealObserver.observe(el));
+
+// --- NAV AMBIENT BLUR ON SCROLL ---
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  if(window.scrollY > 40) { nav.classList.add('on'); } else { nav.classList.remove('on'); }
+  lastScrollY = window.scrollY;
+}, { passive: true });
+
+// --- MOUSE LISTENERS ---
+window.addEventListener('mousemove', (e) => {
+  if(mouse.x === null) { mouse.x = e.clientX; mouse.y = e.clientY; }
+  mouse.tx = e.clientX; mouse.ty = e.clientY;
+}, { passive: true });
+window.addEventListener('mouseleave', () => { mouse.x = null; mouse.y = null; });
+
+window.addEventListener('resize', () => { resizeCanvas(); }, { passive: true });
+document.addEventListener('DOMContentLoaded', () => { initCanvas(); initCookies(); });
+
+// --- PORTFOLIO FILTER SYSTEM ---
+function filterTab(category, btn) {
+  document.querySelectorAll('.ftab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const items = document.querySelectorAll('.pitem');
+  items.forEach(item => {
+    if(category === 'all' || item.getAttribute('data-cat') === category) {
+      item.classList.remove('hidden');
+    } else {
+      item.classList.add('hidden');
+    }
+  });
+}
+
+// --- HAMBURGER & MOBILE MENU ---
+function toggleMenu() {
+  const ham = document.querySelector('.ham');
+  const menu = document.getElementById('mob-menu');
+  ham.classList.toggle('open');
+  menu.classList.toggle('open');
+  if(menu.classList.contains('open')) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+  }
+}
+document.querySelectorAll('.mob-link, .mob-cta').forEach(link => {
+  link.addEventListener('click', () => {
+    const ham = document.querySelector('.ham');
+    const menu = document.getElementById('mob-menu');
+    if(ham.classList.contains('open')) {
+      ham.classList.remove('open');
+      menu.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
+});
+
+// --- COOKIE CONSENT ENGINE ---
+function initCookies() {
+  const consent = localStorage.getItem('cookieConsent');
+  const banner = document.getElementById('cookie-banner');
+  if(!consent) {
+    if(banner) banner.classList.remove('hidden');
+  } else {
+    if(banner) banner.classList.add('hidden');
+  }
+}
+function acceptCookies() {
+  localStorage.setItem('cookieConsent', 'accepted');
+  const banner = document.getElementById('cookie-banner');
+  if(banner) banner.classList.add('hidden');
+}
+function rejectCookies() {
+  localStorage.setItem('cookieConsent', 'rejected');
+  const banner = document.getElementById('cookie-banner');
+  if(banner) banner.classList.add('hidden');
+}
+
+// --- LEGAL MODALS ENGINE ---
+function openLegal(id) {
+  const modal = document.getElementById('modal-' + id);
+  if(modal) {
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+}
+function closeLegal(id) {
+  const modal = document.getElementById('modal-' + id);
+  if(modal) {
+    modal.classList.remove('open');
+    const mobMenu = document.getElementById('mob-menu');
+    if(!mobMenu || !mobMenu.classList.contains('open')) {
+      document.body.style.overflow = '';
+    }
+  }
+}
+window.addEventListener('click', (e) => {
+  if(e.target.classList.contains('legal-overlay')) {
+    e.target.classList.remove('open');
+    const mobMenu = document.getElementById('mob-menu');
+    if(!mobMenu || !mobMenu.classList.contains('open')) {
+      document.body.style.overflow = '';
+    }
+  }
+});
+</script>
+</body>
+</html>
